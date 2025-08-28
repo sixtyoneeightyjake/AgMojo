@@ -1,0 +1,1 @@
+Until complete you are to follow .trae/SPEC.md - which implements the full front end.
