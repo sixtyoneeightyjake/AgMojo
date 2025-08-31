@@ -1,0 +1,36 @@
+services:
+  openhands:
+    build:
+      context: ./
+      dockerfile: ./containers/app/Dockerfile
+      args:
+        # Vite build-time vars (replace with your domain + Supabase values)
+        VITE_BACKEND_BASE_URL: agentmojo.sixtyoneeighty.com
+        VITE_SUPABASE_URL: https://tynivuekarrrgcbdjaga.supabase.co
+        VITE_SUPABASE_ANON_KEY: ${VITE_SUPABASE_ANON_KEY:?set in environment}
+    image: openhands:prod
+    container_name: openhands-app
+    # Bind to loopback only; Nginx will proxy from the public internet
+    ports:
+      - "127.0.0.1:3000:3000"
+    restart: unless-stopped
+    environment:
+      # Use prebuilt runtime image to skip local runtime builds (faster + robust)
+      - SANDBOX_RUNTIME_CONTAINER_IMAGE=${SANDBOX_RUNTIME_CONTAINER_IMAGE:-docker.all-hands.dev/all-hands-ai/runtime:0.54-nikolaik}
+      # Public base URL (final public URL to render links)
+      - PUBLIC_BASE_URL=https://agentmojo.sixtyoneeighty.com
+      # Supabase backend verification + per-user stores + auth
+      - OPENHANDS_CONFIG_CLS=openhands.server.config.supabase_server_config.SupabaseServerConfig
+      - OPENHANDS_CONVERSATION_VALIDATOR_CLS=openhands.storage.conversation.supabase_conversation_validator.SupabaseConversationValidator
+      - SUPABASE_URL=${SUPABASE_URL:?set in environment}
+      # Storage
+      - FILE_STORE=local
+      - FILE_STORE_PATH=/.openhands
+      # Optional: tighten WebSocket connection requirements
+      # - SESSION_API_KEY=${SESSION_API_KEY}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ~/.openhands:/.openhands
+      - ./workspace:/opt/workspace_base

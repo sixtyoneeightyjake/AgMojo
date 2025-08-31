@@ -1,0 +1,21 @@
+
+services:
+  openhands:
+    build:
+      context: ./
+      dockerfile: ./containers/app/Dockerfile
+    image: openhands:latest
+    container_name: openhands-app-${DATE:-}
+    environment:
+      - SANDBOX_RUNTIME_CONTAINER_IMAGE=ghcr.io/all-hands-ai/runtime:oh_v0.54.0_vq4hl0089c5gti17_gpa9v1n2cj3x0ufg
+      #- SANDBOX_USER_ID=${SANDBOX_USER_ID:-1234} # enable this only if you want a specific non-root sandbox user but you will have to manually adjust permissions of ~/.openhands for this user
+      - WORKSPACE_MOUNT_PATH=${WORKSPACE_BASE:-$PWD/workspace}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ~/.openhands:/.openhands
+      - ${WORKSPACE_BASE:-$PWD/workspace}:/opt/workspace_base
+    pull_policy: build
+    stdin_open: true
+    tty: true

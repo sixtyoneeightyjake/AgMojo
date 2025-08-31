@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@plugin '../hero.ts';
+@config "../tailwind.config.js";
+@source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+
+.button-base {
+  @apply bg-tertiary border border-border-primary rounded-xl transition-all duration-200;
+}
+
+.skeleton {
+  @apply bg-base-tertiary rounded-xl animate-pulse;
+}
+
+.skeleton-round {
+  @apply bg-base-tertiary rounded-full animate-pulse;
+}
+
+.heading {
+  @apply text-4xl leading-tight font-bold bg-gradient-to-r from-content via-primary to-content bg-clip-text text-transparent;
+}
+
+.loader {
+  background: linear-gradient(135deg, #DC2626, #EF4444);
+  animation: l5 1s infinite linear alternate;
+}
+
+@keyframes l5 {
+  0% {
+    box-shadow: 20px 0 #C9B974, -20px 0 rgba(201,185,116,0.1);
+    background: #C9B974;
+  }
+  33% {
+    box-shadow: 20px 0 #C9B974, -20px 0 rgba(201,185,116,0.1);
+    background: rgba(201,185,116,0.1);
+  }
+  66% {
+    box-shadow: 20px 0 rgba(201,185,116,0.1), -20px 0 #C9B974;
+    background: rgba(201,185,116,0.1);
+  }
+  100% {
+    box-shadow: 20px 0 rgba(201,185,116,0.1), -20px 0 #C9B974;
+    background: #C9B974;
+  }
+}

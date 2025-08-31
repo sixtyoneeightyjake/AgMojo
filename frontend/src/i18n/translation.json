@@ -1,0 +1,2390 @@
+{
+  "MAINTENANCE$SCHEDULED_MESSAGE": {
+    "en": "Scheduled maintenance will begin at {{time}}"
+  },
+  "MICROAGENT$NO_REPOSITORY_FOUND": {
+    "en": "No repository found to launch mojoagent"
+  },
+  "MICROAGENT$ADD_TO_MICROAGENT": {
+    "en": "Add to MojoAgent"
+  },
+  "MICROAGENT$WHAT_TO_ADD": {
+    "en": "What would you like to add to the MojoAgent?"
+  },
+  "MICROAGENT$WHERE_TO_PUT": {
+    "en": "Where should we put it?"
+  },
+  "MICROAGENT$ADD_TRIGGER": {
+    "en": "Add a trigger for the mojoagent"
+  },
+  "MICROAGENT$WHAT_TO_REMEMBER": {
+    "en": "What would you like your mojoagent to remember?"
+  },
+  "MICROAGENT$ADD_TRIGGERS": {
+    "en": "Add triggers for the mojoagent"
+  },
+  "MICROAGENT$WAIT_FOR_RUNTIME": {
+    "en": "Please wait for the runtime to be active."
+  },
+  "MICROAGENT$ADDING_CONTEXT": {
+    "en": "Agent Mojo is adding this new context to your respository. We'll let you know when the pull request is ready."
+  },
+  "MICROAGENT$VIEW_CONVERSATION": {
+    "en": "View Conversation"
+  },
+  "MICROAGENT$SUCCESS_PR_READY": {
+    "en": "Success! Your mojoagent pull request is ready."
+  },
+  "MICROAGENT$STATUS_CREATING": {
+    "en": "Modifying mojoagent..."
+  },
+  "MICROAGENT$STATUS_OPENING_PR": {
+    "en": "Opening PR"
+  },
+  "MICROAGENT$STATUS_COMPLETED": {
+    "en": "View mojoagent update"
+  },
+  "MICROAGENT$STATUS_ERROR": {
+    "en": "MojoAgent encountered an error"
+  },
+  "MICROAGENT$VIEW_YOUR_PR": {
+    "en": "View your PR"
+  },
+  "MICROAGENT$DESCRIBE_WHAT_TO_ADD": {
+    "en": "Describe what you want to add to the MojoAgent..."
+  },
+  "MICROAGENT$SELECT_FILE_OR_CUSTOM": {
+    "en": "Select a mojoagent file or enter a custom value"
+  },
+  "MICROAGENT$TYPE_TRIGGER_SPACE": {
+    "en": "Type a trigger and press Space to add it"
+  },
+  "MICROAGENT$LOADING_PROMPT": {
+    "en": "Loading prompt..."
+  },
+  "MICROAGENT$CANCEL": {
+    "en": "Cancel"
+  },
+  "MICROAGENT$LAUNCH": {
+    "en": "Launch"
+  },
+  "STATUS$WEBSOCKET_CLOSED": {
+    "en": "The WebSocket connection was closed."
+  },
+  "HOME$LAUNCH_FROM_SCRATCH": {
+    "en": "Launch from Scratch"
+  },
+  "HOME$READ_THIS": {
+    "en": "Read this"
+  },
+  "AUTH$LOGGING_BACK_IN": {
+    "en": "Logging back into Agent Mojo..."
+  },
+  "SECURITY$LOW_RISK": {
+    "en": "Risk: Low"
+  },
+  "SECURITY$MEDIUM_RISK": {
+    "en": "Risk: Medium"
+  },
+  "SECURITY$HIGH_RISK": {
+    "en": "Risk: High"
+  },
+  "SECURITY$UNKNOWN_RISK": {
+    "en": "Risk: Unknown"
+  },
+  "FINISH$TASK_COMPLETED_SUCCESSFULLY": {
+    "en": "I believe that the task was **completed successfully**."
+  },
+  "FINISH$TASK_NOT_COMPLETED": {
+    "en": "I believe that the task was **not completed**."
+  },
+  "FINISH$TASK_COMPLETED_PARTIALLY": {
+    "en": "I believe that the task was **completed partially**."
+  },
+  "EVENT$UNKNOWN_EVENT": {
+    "en": "Unknown event"
+  },
+  "OBSERVATION$COMMAND_NO_OUTPUT": {
+    "en": "[Command finished execution with no output]"
+  },
+  "OBSERVATION$MCP_NO_OUTPUT": {
+    "en": "[MCP Tool finished execution with no output]"
+  },
+  "OBSERVATION$TASK_TRACKING_NO_OUTPUT": {
+    "en": "[Task tracking completed with no output]"
+  },
+  "MCP_OBSERVATION$ARGUMENTS": {
+    "en": "Arguments"
+  },
+  "MCP_OBSERVATION$OUTPUT": {
+    "en": "Output"
+  },
+  "TASK_TRACKING_OBSERVATION$TASK_LIST": {
+    "en": "Task List"
+  },
+  "TASK_TRACKING_OBSERVATION$OUTPUT": {
+    "en": "Output"
+  },
+  "TASK_TRACKING_OBSERVATION$TASK_ID": {
+    "en": "ID"
+  },
+  "TASK_TRACKING_OBSERVATION$TASK_NOTES": {
+    "en": "Notes"
+  },
+  "TASK_TRACKING_OBSERVATION$RESULT": {
+    "en": "Result"
+  },
+  "OBSERVATION$ERROR_PREFIX": {
+    "en": "error:"
+  },
+  "TASK$ADDRESSING_TASK": {
+    "en": "Addressing task..."
+  },
+  "SECRETS$SECRET_VALUE_REQUIRED": {
+    "en": "Secret value is required"
+  },
+  "SECRETS$ADD_SECRET": {
+    "en": "Add secret"
+  },
+  "SECRETS$EDIT_SECRET": {
+    "en": "Edit secret"
+  },
+  "SECRETS$ADD_NEW_SECRET": {
+    "en": "Add a new secret"
+  },
+  "SECRETS$CONFIRM_DELETE_KEY": {
+    "en": "Are you sure you want to delete this key?"
+  },
+  "SETTINGS$MCP_TITLE": {
+    "en": "Model Context Protocol (MCP)"
+  },
+  "SETTINGS$MCP_DESCRIPTION": {
+    "en": "Configure MCP servers for enhanced model capabilities"
+  },
+  "SETTINGS$NAV_MCP": {
+    "en": "MCP"
+  },
+  "SETTINGS$MCP_CONFIGURATION": {
+    "en": "MCP Configuration"
+  },
+  "SETTINGS$MCP_EDIT_CONFIGURATION": {
+    "en": "Edit Configuration"
+  },
+  "SETTINGS$MCP_PREVIEW_CHANGES": {
+    "en": "Preview Changes"
+  },
+  "SETTINGS$MCP_CONFIG_DESCRIPTION": {
+    "en": "Edit the JSON configuration for MCP servers below. The configuration must include both sse_servers and stdio_servers arrays. For full configuration details and integration examples, see the <a>documentation</a>."
+  },
+  "SETTINGS$MCP_CONFIG_ERROR": {
+    "en": "Error:"
+  },
+  "SETTINGS$MCP_CONFIG_EXAMPLE": {
+    "en": "Example:"
+  },
+  "SETTINGS$MCP_NO_SERVERS_CONFIGURED": {
+    "en": "No MCP servers are currently configured. Click \"Edit Configuration\" to add servers."
+  },
+  "SETTINGS$MCP_SSE_SERVERS": {
+    "en": "SSE Servers"
+  },
+  "SETTINGS$MCP_STDIO_SERVERS": {
+    "en": "Stdio Servers"
+  },
+  "SETTINGS$MCP_API_KEY": {
+    "en": "API Key"
+  },
+  "SETTINGS$MCP_API_KEY_NOT_SET": {
+    "en": "Not set"
+  },
+  "SETTINGS$MCP_COMMAND": {
+    "en": "Command"
+  },
+  "SETTINGS$MCP_ARGS": {
+    "en": "Args"
+  },
+  "SETTINGS$MCP_ENV": {
+    "en": "Env"
+  },
+  "SETTINGS$MCP_NAME": {
+    "en": "Name"
+  },
+  "SETTINGS$MCP_URL": {
+    "en": "URL"
+  },
+  "SETTINGS$MCP_LEARN_MORE": {
+    "en": "Learn more"
+  },
+  "SETTINGS$MCP_ERROR_SSE_ARRAY": {
+    "en": "sse_servers must be an array"
+  },
+  "SETTINGS$MCP_ERROR_STDIO_ARRAY": {
+    "en": "stdio_servers must be an array"
+  },
+  "SETTINGS$MCP_ERROR_SSE_URL": {
+    "en": "Each SSE server must be a string URL or have a url property"
+  },
+  "SETTINGS$MCP_ERROR_STDIO_PROPS": {
+    "en": "Each stdio server must have name and command properties"
+  },
+  "SETTINGS$MCP_ERROR_INVALID_JSON": {
+    "en": "Invalid JSON"
+  },
+  "HOME$CONNECT_PROVIDER_MESSAGE": {
+    "en": "To get started with suggested tasks, please connect your GitHub, GitLab, or Bitbucket account."
+  },
+  "HOME$LETS_START_BUILDING": {
+    "en": "Build. Cool. Shit!"
+  },
+  "HOME$OPENHANDS_DESCRIPTION": {
+    "en": "Agent Mojo makes building cool shit both fun and super fucking annoying."
+  },
+  "HOME$NOT_SURE_HOW_TO_START": {
+    "en": "Not sure how to start?"
+  },
+  "HOME$CONNECT_TO_REPOSITORY": {
+    "en": "Connect to a Repository"
+  },
+  "HOME$CONNECT_TO_REPOSITORY_TOOLTIP": {
+    "en": "You can enter a public GitHub URL if you'd like to work from a public repo instead"
+  },
+  "HOME$LOADING": {
+    "en": "Loading..."
+  },
+  "HOME$LOADING_REPOSITORIES": {
+    "en": "Loading repositories..."
+  },
+  "HOME$FAILED_TO_LOAD_REPOSITORIES": {
+    "en": "Failed to load repositories"
+  },
+  "HOME$LOADING_BRANCHES": {
+    "en": "Loading branches..."
+  },
+  "HOME$FAILED_TO_LOAD_BRANCHES": {
+    "en": "Failed to load branches"
+  },
+  "HOME$OPEN_ISSUE": {
+    "en": "Open issue"
+  },
+  "HOME$FIX_FAILING_CHECKS": {
+    "en": "Fix failing checks"
+  },
+  "HOME$RESOLVE_MERGE_CONFLICTS": {
+    "en": "Resolve merge conflicts"
+  },
+  "HOME$RESOLVE_UNRESOLVED_COMMENTS": {
+    "en": "Resolve unresolved comments"
+  },
+  "HOME$LAUNCH": {
+    "en": "Launch"
+  },
+  "SETTINGS$ADVANCED": {
+    "en": "Advanced"
+  },
+  "SETTINGS$BASE_URL": {
+    "en": "Base URL"
+  },
+  "SETTINGS$AGENT": {
+    "en": "Agent"
+  },
+  "SETTINGS$ENABLE_MEMORY_CONDENSATION": {
+    "en": "Enable memory condensation"
+  },
+  "SETTINGS$CONDENSER_MAX_SIZE": {
+    "en": "Memory condenser max history size"
+  },
+  "SETTINGS$CONDENSER_MAX_SIZE_TOOLTIP": {
+    "en": "After this many events, the condenser will summarize history. Minimum 10."
+  },
+  "SETTINGS$LANGUAGE": {
+    "en": "Language"
+  },
+  "ACTION$PUSH_TO_BRANCH": {
+    "en": "Push to Branch"
+  },
+  "ACTION$PUSH_CREATE_PR": {
+    "en": "Push & Create PR"
+  },
+  "ACTION$PUSH_CHANGES_TO_PR": {
+    "en": "Push changes to PR"
+  },
+  "ANALYTICS$TITLE": {
+    "en": "Your Privacy Preferences"
+  },
+  "ANALYTICS$DESCRIPTION": {
+    "en": "We use tools to understand how our application is used to improve your experience. You can enable or disable analytics. Your preferences will be stored and can be updated anytime."
+  },
+  "ANALYTICS$SEND_ANONYMOUS_DATA": {
+    "en": "Send anonymous usage data"
+  },
+  "ANALYTICS$CONFIRM_PREFERENCES": {
+    "en": "Confirm Preferences"
+  },
+  "SETTINGS$SAVING": {
+    "en": "Saving..."
+  },
+  "SETTINGS$SAVE_CHANGES": {
+    "en": "Save Changes"
+  },
+  "SETTINGS$NAV_INTEGRATIONS": {
+    "en": "Integrations"
+  },
+  "SETTINGS$NAV_APPLICATION": {
+    "en": "Application"
+  },
+  "SETTINGS$NAV_SECRETS": {
+    "en": "Secrets"
+  },
+  "SETTINGS$GITHUB": {
+    "en": "GitHub"
+  },
+  "SETTINGS$SLACK": {
+    "en": "Slack"
+  },
+  "SETTINGS$NAV_LLM": {
+    "en": "LLM"
+  },
+  "GIT$MERGE_REQUEST": {
+    "en": "Merge Request"
+  },
+  "GIT$GITLAB_API": {
+    "en": "GitLab API"
+  },
+  "GIT$PULL_REQUEST": {
+    "en": "Pull Request"
+  },
+  "GIT$GITHUB_API": {
+    "en": "GitHub API"
+  },
+  "BUTTON$COPY": {
+    "en": "Copy to clipboard"
+  },
+  "BUTTON$COPIED": {
+    "en": "Copied to clipboard"
+  },
+  "APP$TITLE": {
+    "en": "App"
+  },
+  "BROWSER$TITLE": {
+    "en": "Browser"
+  },
+  "BROWSER$EMPTY_MESSAGE": {
+    "en": "If you tell Agent Mojo to start a web server, the app will appear here."
+  },
+  "SETTINGS$TITLE": {
+    "en": "Settings"
+  },
+  "CONVERSATION$START_NEW": {
+    "en": "Start new conversation"
+  },
+  "CONVERSATION$REPOSITORY": {
+    "en": "Repository"
+  },
+  "CONVERSATION$BRANCH": {
+    "en": "Branch"
+  },
+  "CONVERSATION$GIT_PROVIDER": {
+    "en": "Git Provider"
+  },
+  "ACCOUNT_SETTINGS$TITLE": {
+    "en": "Account Settings"
+  },
+  "WORKSPACE$TERMINAL_TAB_LABEL": {
+    "en": "Terminal"
+  },
+  "WORKSPACE$BROWSER_TAB_LABEL": {
+    "en": "Browser"
+  },
+  "WORKSPACE$JUPYTER_TAB_LABEL": {
+    "en": "Jupyter"
+  },
+  "WORKSPACE$CODE_EDITOR_TAB_LABEL": {
+    "en": "Code Editor"
+  },
+  "WORKSPACE$TITLE": {
+    "en": "Workspace"
+  },
+  "TERMINAL$WAITING_FOR_CLIENT": {
+    "en": "Waiting for client to become ready..."
+  },
+  "CODE_EDITOR$FILE_SAVED_SUCCESSFULLY": {
+    "en": "File saved successfully"
+  },
+  "CODE_EDITOR$SAVING_LABEL": {
+    "en": "Saving..."
+  },
+  "CODE_EDITOR$SAVE_LABEL": {
+    "en": "Save"
+  },
+  "CODE_EDITOR$OPTIONS": {
+    "en": "Options"
+  },
+  "CODE_EDITOR$FILE_SAVE_ERROR": {
+    "en": "An unknown error occurred while saving the file"
+  },
+  "CODE_EDITOR$EMPTY_MESSAGE": {
+    "en": "No file selected."
+  },
+  "FILE_SERVICE$SELECT_FILE_ERROR": {
+    "en": "Error selecting file. Please try again."
+  },
+  "FILE_SERVICE$UPLOAD_FILES_ERROR": {
+    "en": "Error uploading files. Please try again."
+  },
+  "FILE_SERVICE$LIST_FILES_ERROR": {
+    "en": "Error listing files. Please try again."
+  },
+  "FILE_SERVICE$SAVE_FILE_ERROR": {
+    "en": "Error saving file. Please try again."
+  },
+  "SUGGESTIONS$INCREASE_TEST_COVERAGE": {
+    "en": "Lint Like You Mean It"
+  },
+  "SUGGESTIONS$AUTO_MERGE_PRS": {
+    "en": "Auto-merge Dependabot PRs"
+  },
+  "SUGGESTIONS$FIX_README": {
+    "en": "Improve README"
+  },
+  "SUGGESTIONS$CLEAN_DEPENDENCIES": {
+    "en": "Clean up dependencies"
+  },
+  "SETTINGS$LLM_SETTINGS": {
+    "en": "LLM Settings"
+  },
+  "SETTINGS$GIT_SETTINGS": {
+    "en": "Git Settings"
+  },
+  "SETTINGS$GIT_SETTINGS_DESCRIPTION": {
+    "en": "Configure the username and email that Agent Mojo uses to commit changes."
+  },
+  "SETTINGS$SOUND_NOTIFICATIONS": {
+    "en": "Sound Notifications"
+  },
+  "SETTINGS$PROACTIVE_CONVERSATION_STARTERS": {
+    "en": "Suggest Tasks on GitHub"
+  },
+  "SETTINGS$SOLVABILITY_ANALYSIS": {
+    "en": "Enable Solvability Analysis"
+  },
+  "SETTINGS$SEARCH_API_KEY": {
+    "en": "Search API Key (Tavily)"
+  },
+  "SETTINGS$SEARCH_API_KEY_OPTIONAL": {
+    "en": "This field is optional. We use Tavily as our default search engine provider."
+  },
+  "SETTINGS$SEARCH_API_KEY_INSTRUCTIONS": {
+    "en": "Get your API key from Tavily"
+  },
+  "SETTINGS$CUSTOM_MODEL": {
+    "en": "Custom Model"
+  },
+  "GITHUB$CODE_NOT_IN_GITHUB": {
+    "en": "Code not in GitHub?"
+  },
+  "GITHUB$START_FROM_SCRATCH": {
+    "en": "Start from scratch"
+  },
+  "AVATAR$ALT_TEXT": {
+    "en": "user avatar"
+  },
+  "BRANDING$ALL_HANDS_AI": {
+    "en": "Agent Mojo"
+  },
+  "BRANDING$ALL_HANDS_LOGO": {
+    "en": "Agent Mojo Logo"
+  },
+  "ERROR$GENERIC": {
+    "en": "An error occurred"
+  },
+  "GITHUB$AUTH_SCOPE": {
+    "en": "openid email profile"
+  },
+  "FILE_SERVICE$INVALID_FILE_PATH": {
+    "en": "Invalid file path. Please check the file name and try again."
+  },
+  "VSCODE$OPEN": {
+    "en": "Open in VS Code"
+  },
+  "VSCODE$TITLE": {
+    "en": "VS Code"
+  },
+  "VSCODE$LOADING": {
+    "en": "Loading VS Code..."
+  },
+  "VSCODE$URL_NOT_AVAILABLE": {
+    "en": "VS Code URL not available"
+  },
+  "VSCODE$FETCH_ERROR": {
+    "en": "Failed to fetch VS Code URL"
+  },
+  "VSCODE$CROSS_ORIGIN_WARNING": {
+    "en": "The code editor cannot be embedded due to browser security restrictions. Cross-origin cookies are being blocked."
+  },
+  "VSCODE$URL_PARSE_ERROR": {
+    "en": "Error parsing URL"
+  },
+  "VSCODE$OPEN_IN_NEW_TAB": {
+    "en": "Open in New Tab"
+  },
+  "INCREASE_TEST_COVERAGE": {
+    "en": "Lint Like You Mean It"
+  },
+  "AUTO_MERGE_PRS": {
+    "en": "Upgrade Dependencies (Pray First)"
+  },
+  "FIX_README": {
+    "en": "Auto-fix Styling"
+  },
+  "CLEAN_DEPENDENCIES": {
+    "en": "Unbreak the Build"
+  },
+  "CONFIGURATION$OPENHANDS_WORKSPACE_DIRECTORY_INPUT_LABEL": {
+    "en": "Agent Mojo Workspace directory"
+  },
+  "LLM$PROVIDER": {
+    "en": "LLM Provider"
+  },
+  "LLM$SELECT_PROVIDER_PLACEHOLDER": {
+    "en": "Select a provider"
+  },
+  "API$KEY": {
+    "en": "API Key"
+  },
+  "BUTTON$SAVE": {
+    "en": "Save"
+  },
+  "BUTTON$CLOSE": {
+    "en": "Close"
+  },
+  "MODAL$CONFIRM_RESET_TITLE": {
+    "en": "Are you sure?"
+  },
+  "MODAL$CONFIRM_RESET_MESSAGE": {
+    "en": "All information will be deleted"
+  },
+  "MODAL$END_SESSION_TITLE": {
+    "en": "End Session"
+  },
+  "MODAL$END_SESSION_MESSAGE": {
+    "en": "Changing workspace settings will end the current session"
+  },
+  "BUTTON$END_SESSION": {
+    "en": "End Session"
+  },
+  "BUTTON$CANCEL": {
+    "en": "Cancel"
+  },
+  "EXIT_PROJECT$CONFIRM": {
+    "en": "Exit Project"
+  },
+  "EXIT_PROJECT$TITLE": {
+    "en": "Are you sure you want to exit this project?"
+  },
+  "LANGUAGE$LABEL": {
+    "en": "Language"
+  },
+  "GITHUB$TOKEN_LABEL": {
+    "en": "GitHub Token"
+  },
+  "GITHUB$HOST_LABEL": {
+    "en": "GitHub Host (optional)"
+  },
+  "GITHUB$TOKEN_OPTIONAL": {
+    "en": "GitHub Token (Optional)"
+  },
+  "GITHUB$GET_TOKEN": {
+    "en": "Get your token"
+  },
+  "GITHUB$TOKEN_HELP_TEXT": {
+    "en": "Get your <0>GitHub token</0> or <1>click here for instructions</1>"
+  },
+  "GITHUB$TOKEN_LINK_TEXT": {
+    "en": "GitHub token"
+  },
+  "GITHUB$INSTRUCTIONS_LINK_TEXT": {
+    "en": "click here for instructions"
+  },
+  "COMMON$HERE": {
+    "en": "here"
+  },
+  "GITHUB$TOKEN_INVALID": {
+    "en": "Invalid GitHub token"
+  },
+  "BUTTON$DISCONNECT": {
+    "en": "Disconnect"
+  },
+  "GITHUB$CONFIGURE_REPOS": {
+    "en": "Configure Github Repositories"
+  },
+  "SLACK$INSTALL_APP": {
+    "en": "Install Agent Mojo Slack App"
+  },
+  "COMMON$CLICK_FOR_INSTRUCTIONS": {
+    "en": "Click here for instructions"
+  },
+  "LLM$SELECT_MODEL_PLACEHOLDER": {
+    "en": "Select a model"
+  },
+  "LLM$MODEL": {
+    "en": "LLM Model"
+  },
+  "CONFIGURATION$OPENHANDS_WORKSPACE_DIRECTORY_INPUT_PLACEHOLDER": {
+    "en": "Default: ./workspace"
+  },
+  "CONFIGURATION$MODAL_TITLE": {
+    "en": "Configuration"
+  },
+  "CONFIGURATION$MODEL_SELECT_LABEL": {
+    "en": "Model"
+  },
+  "CONFIGURATION$MODEL_SELECT_PLACEHOLDER": {
+    "en": "Select a model"
+  },
+  "CONFIGURATION$AGENT_SELECT_LABEL": {
+    "en": "Agent"
+  },
+  "CONFIGURATION$AGENT_SELECT_PLACEHOLDER": {
+    "en": "Select an agent"
+  },
+  "CONFIGURATION$LANGUAGE_SELECT_LABEL": {
+    "en": "Language"
+  },
+  "CONFIGURATION$LANGUAGE_SELECT_PLACEHOLDER": {
+    "en": "Select a language"
+  },
+  "CONFIGURATION$SECURITY_SELECT_LABEL": {
+    "en": "Security analyzer"
+  },
+  "CONFIGURATION$SECURITY_SELECT_PLACEHOLDER": {
+    "en": "Select a security analyzer (optional)"
+  },
+  "CONFIGURATION$MODAL_CLOSE_BUTTON_LABEL": {
+    "en": "Close"
+  },
+  "CONFIGURATION$MODAL_SAVE_BUTTON_LABEL": {
+    "en": "Save"
+  },
+  "CONFIGURATION$MODAL_RESET_BUTTON_LABEL": {
+    "en": "Reset to defaults"
+  },
+  "STATUS$CONNECTED_TO_SERVER": {
+    "en": "Connected to server"
+  },
+  "PROJECT$NEW_PROJECT": {
+    "en": "New Project"
+  },
+  "BROWSER$SCREENSHOT": {
+    "en": "Browser Screenshot"
+  },
+  "TIME$MINUTES_AGO": {
+    "en": "minutes ago"
+  },
+  "TIME$HOURS_AGO": {
+    "en": "hours ago"
+  },
+  "TIME$DAYS_AGO": {
+    "en": "days ago"
+  },
+  "SETTINGS_FORM$RUNTIME_SIZE_LABEL": {
+    "en": "Runtime Settings"
+  },
+  "CONFIGURATION$SETTINGS_NEED_UPDATE_MESSAGE": {
+    "en": "We've changed some settings in the latest update. Take a minute to review."
+  },
+  "CONFIGURATION$AGENT_LOADING": {
+    "en": "Please wait while the agent loads. This may take a few minutes..."
+  },
+  "CONFIGURATION$AGENT_RUNNING": {
+    "en": "Please stop the agent before editing these settings."
+  },
+  "CONFIGURATION$ERROR_FETCH_MODELS": {
+    "en": "Failed to fetch models and agents"
+  },
+  "CONFIGURATION$SETTINGS_NOT_FOUND": {
+    "en": "Settings not found. Please check your API key"
+  },
+  "CONNECT_TO_GITHUB_BY_TOKEN_MODAL$TERMS_OF_SERVICE": {
+    "en": "terms of service"
+  },
+  "SESSION$SERVER_CONNECTED_MESSAGE": {
+    "en": "Connected to server"
+  },
+  "SESSION$SESSION_HANDLING_ERROR_MESSAGE": {
+    "en": "Error handling message"
+  },
+  "SESSION$SESSION_CONNECTION_ERROR_MESSAGE": {
+    "en": "Error connecting to session"
+  },
+  "SESSION$SOCKET_NOT_INITIALIZED_ERROR_MESSAGE": {
+    "en": "Socket not initialized"
+  },
+  "SESSION$TIMEOUT_MESSAGE": {
+    "en": "Session Timeout!"
+  },
+  "EXPLORER$UPLOAD_ERROR_MESSAGE": {
+    "en": "Error uploading file"
+  },
+  "EXPLORER$LABEL_DROP_FILES": {
+    "en": "Drop files here"
+  },
+  "EXPLORER$UPLOAD_SUCCESS_MESSAGE": {
+    "en": "Successfully uploaded {{count}} file(s)"
+  },
+  "EXPLORER$NO_FILES_UPLOADED_MESSAGE": {
+    "en": "No files were uploaded"
+  },
+  "EXPLORER$UPLOAD_PARTIAL_SUCCESS_MESSAGE": {
+    "en": "{{count}} file(s) were skipped during upload"
+  },
+  "EXPLORER$UPLOAD_UNEXPECTED_RESPONSE_MESSAGE": {
+    "en": "Unexpected response structure from server"
+  },
+  "EXPLORER$VSCODE_SWITCHING_MESSAGE": {
+    "en": "Switching to VS Code in 3 seconds...\nImportant: Please inform the agent of any changes you make in VS Code. To avoid conflicts, wait for the assistant to complete its work before making your own changes."
+  },
+  "EXPLORER$VSCODE_SWITCHING_ERROR_MESSAGE": {
+    "en": "Error switching to VS Code: {{error}}"
+  },
+  "LOAD_SESSION$MODAL_TITLE": {
+    "en": "Return to existing session?"
+  },
+  "LOAD_SESSION$MODAL_CONTENT": {
+    "en": "You seem to have an ongoing session. Would you like to pick up where you left off, or start fresh?"
+  },
+  "LOAD_SESSION$RESUME_SESSION_MODAL_ACTION_LABEL": {
+    "en": "Resume Session"
+  },
+  "LOAD_SESSION$START_NEW_SESSION_MODAL_ACTION_LABEL": {
+    "en": "Start New Session"
+  },
+  "FEEDBACK$MODAL_TITLE": {
+    "en": "Share feedback"
+  },
+  "FEEDBACK$MODAL_CONTENT": {
+    "en": "To help us improve, we collect feedback from your interactions to improve our prompts. By submitting this form, you consent to us collecting this data."
+  },
+  "FEEDBACK$EMAIL_LABEL": {
+    "en": "Your email"
+  },
+  "FEEDBACK$CONTRIBUTE_LABEL": {
+    "en": "Contribute to public dataset"
+  },
+  "FEEDBACK$SHARE_LABEL": {
+    "en": "Share"
+  },
+  "FEEDBACK$CANCEL_LABEL": {
+    "en": "Cancel"
+  },
+  "FEEDBACK$EMAIL_PLACEHOLDER": {
+    "en": "Enter your email address"
+  },
+  "FEEDBACK$PASSWORD_COPIED_MESSAGE": {
+    "en": "Password copied to clipboard."
+  },
+  "FEEDBACK$GO_TO_FEEDBACK": {
+    "en": "Go to shared feedback"
+  },
+  "FEEDBACK$PASSWORD": {
+    "en": "Password:"
+  },
+  "FEEDBACK$INVALID_EMAIL_FORMAT": {
+    "en": "Invalid email format"
+  },
+  "FEEDBACK$FAILED_TO_SHARE": {
+    "en": "Failed to share, please contact the developers:"
+  },
+  "FEEDBACK$COPY_LABEL": {
+    "en": "Copy"
+  },
+  "FEEDBACK$SHARING_SETTINGS_LABEL": {
+    "en": "Sharing settings"
+  },
+  "SECURITY$UNKNOWN_ANALYZER_LABEL": {
+    "en": "Unknown security analyzer chosen"
+  },
+  "INVARIANT$UPDATE_POLICY_LABEL": {
+    "en": "Update Policy"
+  },
+  "INVARIANT$UPDATE_SETTINGS_LABEL": {
+    "en": "Update Settings"
+  },
+  "INVARIANT$SETTINGS_LABEL": {
+    "en": "Settings"
+  },
+  "INVARIANT$ASK_CONFIRMATION_RISK_SEVERITY_LABEL": {
+    "en": "Ask for user confirmation on risk severity:"
+  },
+  "INVARIANT$DONT_ASK_FOR_CONFIRMATION_LABEL": {
+    "en": "Don't ask for confirmation"
+  },
+  "INVARIANT$INVARIANT_ANALYZER_LABEL": {
+    "en": "Invariant Analyzer"
+  },
+  "INVARIANT$INVARIANT_ANALYZER_MESSAGE": {
+    "en": "Invariant Analyzer continuously monitors your Agent Mojo agent for security issues."
+  },
+  "INVARIANT$CLICK_TO_LEARN_MORE_LABEL": {
+    "en": "Click to learn more"
+  },
+  "INVARIANT$POLICY_LABEL": {
+    "en": "Policy"
+  },
+  "INVARIANT$LOG_LABEL": {
+    "en": "Logs"
+  },
+  "INVARIANT$EXPORT_TRACE_LABEL": {
+    "en": "Export Trace"
+  },
+  "INVARIANT$TRACE_EXPORTED_MESSAGE": {
+    "en": "Trace exported"
+  },
+  "INVARIANT$POLICY_UPDATED_MESSAGE": {
+    "en": "Policy updated"
+  },
+  "INVARIANT$SETTINGS_UPDATED_MESSAGE": {
+    "en": "Settings updated"
+  },
+  "CHAT_INTERFACE$AUGMENTED_PROMPT_FILES_TITLE": {
+    "en": "NEW FILES ADDED"
+  },
+  "CHAT_INTERFACE$DISCONNECTED": {
+    "en": "Disconnected"
+  },
+  "CHAT_INTERFACE$CONNECTING": {
+    "en": "Connecting... (this may take 1-2 minutes)"
+  },
+  "CHAT_INTERFACE$STOPPED": {
+    "en": "Stopped"
+  },
+  "CHAT_INTERFACE$INITIALIZING_AGENT_LOADING_MESSAGE": {
+    "en": "Initializing agent..."
+  },
+  "CHAT_INTERFACE$AGENT_INIT_MESSAGE": {
+    "en": "Agent is initialized, waiting for task..."
+  },
+  "CHAT_INTERFACE$AGENT_RUNNING_MESSAGE": {
+    "en": "Agent is running task"
+  },
+  "CHAT_INTERFACE$AGENT_AWAITING_USER_INPUT_MESSAGE": {
+    "en": "Agent is awaiting user input..."
+  },
+  "CHAT_INTERFACE$AGENT_RATE_LIMITED_MESSAGE": {
+    "en": "Agent is Rate Limited. Retrying..."
+  },
+  "CHAT_INTERFACE$AGENT_RATE_LIMITED_STOPPED_MESSAGE": {
+    "en": "Agent is rate-limited. Stopped."
+  },
+  "CHAT_INTERFACE$AGENT_PAUSED_MESSAGE": {
+    "en": "Agent has paused."
+  },
+  "LANDING$TITLE": {
+    "en": "What's the worst that can happen, right?"
+  },
+  "LANDING$SUBTITLE": {
+    "en": "Agent Mojo reads minds, so be as vague as possible and expierience the magic of GIFs that you can't ever unsee."
+  },
+  "SUGGESTIONS$HELLO_WORLD": {
+    "en": "Create a Hello World app"
+  },
+  "SUGGESTIONS$TODO_APP": {
+    "en": "Build a todo list application"
+  },
+  "SUGGESTIONS$HACKER_NEWS": {
+    "en": "Write a bash script that shows the top story on Hacker News"
+  },
+  "LANDING$CHANGE_PROMPT": {
+    "en": "What would you like to change in {{repo}}?"
+  },
+  "GITHUB$CONNECT": {
+    "en": "Connect to GitHub"
+  },
+  "GITHUB$NO_RESULTS": {
+    "en": "No results found."
+  },
+  "GITHUB$LOADING_REPOSITORIES": {
+    "en": "Loading repositories..."
+  },
+  "GITHUB$ADD_MORE_REPOS": {
+    "en": "Add more repositories..."
+  },
+  "GITHUB$YOUR_REPOS": {
+    "en": "Your Repos"
+  },
+  "GITHUB$PUBLIC_REPOS": {
+    "en": "Public Repos"
+  },
+  "DOWNLOAD$PREPARING": {
+    "en": "Preparing Download..."
+  },
+  "DOWNLOAD$DOWNLOADING": {
+    "en": "Downloading Files"
+  },
+  "DOWNLOAD$FOUND_FILES": {
+    "en": "Found {{count}} files..."
+  },
+  "DOWNLOAD$SCANNING": {
+    "en": "Scanning workspace..."
+  },
+  "DOWNLOAD$FILES_PROGRESS": {
+    "en": "{{downloaded}} of {{total}} files"
+  },
+  "DOWNLOAD$CANCEL": {
+    "en": "Cancel"
+  },
+  "ACTION$CONFIRM": {
+    "en": "Confirm action"
+  },
+  "ACTION$REJECT": {
+    "en": "Reject action"
+  },
+  "AGENT$RESUME_TASK": {
+    "en": "Resume the agent task"
+  },
+  "AGENT$PAUSE_TASK": {
+    "en": "Pause the current task"
+  },
+  "TOS$ACCEPT": {
+    "en": "I accept the"
+  },
+  "TOS$TERMS": {
+    "en": "terms of service"
+  },
+  "USER$ACCOUNT_SETTINGS": {
+    "en": "Account settings"
+  },
+  "JUPYTER$OUTPUT_LABEL": {
+    "en": "STDOUT/STDERR"
+  },
+  "BUTTON$STOP": {
+    "en": "Stop"
+  },
+  "BUTTON$PAUSE": {
+    "en": "Pause"
+  },
+  "BUTTON$EDIT_TITLE": {
+    "en": "Edit Title"
+  },
+  "BUTTON$DOWNLOAD_VIA_VSCODE": {
+    "en": "Download via VS Code"
+  },
+  "BUTTON$DISPLAY_COST": {
+    "en": "Display Cost"
+  },
+  "BUTTON$SHOW_AGENT_TOOLS_AND_METADATA": {
+    "en": "Show Agent Tools & Metadata"
+  },
+  "LANDING$ATTACH_IMAGES": {
+    "en": "Attach images"
+  },
+  "LANDING$OPEN_REPO": {
+    "en": "Open a Repo"
+  },
+  "LANDING$REPLAY": {
+    "en": "+ Replay Trajectory"
+  },
+  "LANDING$UPLOAD_TRAJECTORY": {
+    "en": "Upload a .json"
+  },
+  "LANDING$RECENT_CONVERSATION": {
+    "en": "jump back to your most recent conversation"
+  },
+  "CONVERSATION$CONFIRM_DELETE": {
+    "en": "Confirm Delete"
+  },
+  "CONVERSATION$CONFIRM_STOP": {
+    "en": "Confirm Stop"
+  },
+  "CONVERSATION$CONFIRM_PAUSE": {
+    "en": "Confirm Pause"
+  },
+  "CONVERSATION$PAUSE_WARNING": {
+    "en": "Are you sure you want to pause this conversation?"
+  },
+  "CONVERSATION$STOP_WARNING": {
+    "en": "Are you sure you want to pause this conversation?"
+  },
+  "CONVERSATION$METRICS_INFO": {
+    "en": "Conversation Metrics"
+  },
+  "CONVERSATION$CREATED": {
+    "en": "Created"
+  },
+  "CONVERSATION$AGO": {
+    "en": "ago"
+  },
+  "GITHUB$VSCODE_LINK_DESCRIPTION": {
+    "en": "and use the VS Code link to upload and download your code"
+  },
+  "CONVERSATION$EXIT_WARNING": {
+    "en": "Exit Conversation"
+  },
+  "CONVERSATION$TITLE_UPDATED": {
+    "en": "Conversation title updated successfully"
+  },
+  "LANDING$OR": {
+    "en": "Or"
+  },
+  "SUGGESTIONS$TEST_COVERAGE": {
+    "en": "Increase my test coverage"
+  },
+  "SUGGESTIONS$AUTO_MERGE": {
+    "en": "Auto-merge Dependabot PRs"
+  },
+  "CHAT_INTERFACE$AGENT_STOPPED_MESSAGE": {
+    "en": "Agent has stopped."
+  },
+  "CHAT_INTERFACE$AGENT_FINISHED_MESSAGE": {
+    "en": "Agent has finished the task."
+  },
+  "CHAT_INTERFACE$AGENT_REJECTED_MESSAGE": {
+    "en": "Agent has rejected the task."
+  },
+  "CHAT_INTERFACE$AGENT_ERROR_MESSAGE": {
+    "en": "Agent encountered an error."
+  },
+  "CHAT_INTERFACE$AGENT_AWAITING_USER_CONFIRMATION_MESSAGE": {
+    "en": "Agent is awaiting user confirmation for the pending action."
+  },
+  "CHAT_INTERFACE$AGENT_ACTION_USER_CONFIRMED_MESSAGE": {
+    "en": "Agent action has been confirmed!"
+  },
+  "CHAT_INTERFACE$AGENT_ACTION_USER_REJECTED_MESSAGE": {
+    "en": "Agent action has been rejected!"
+  },
+  "CHAT_INTERFACE$INPUT_PLACEHOLDER": {
+    "en": "Message assistant..."
+  },
+  "CHAT_INTERFACE$INPUT_CONTINUE_MESSAGE": {
+    "en": "Continue"
+  },
+  "CHAT_INTERFACE$USER_ASK_CONFIRMATION": {
+    "en": "Do you want to continue with this action?"
+  },
+  "CHAT_INTERFACE$HIGH_RISK_WARNING": {
+    "en": "Review carefully before proceeding."
+  },
+  "CHAT_INTERFACE$USER_CONFIRMED": {
+    "en": "Confirm the requested action"
+  },
+  "CHAT_INTERFACE$USER_REJECTED": {
+    "en": "Reject the requested action"
+  },
+  "CHAT_INTERFACE$INPUT_SEND_MESSAGE_BUTTON_CONTENT": {
+    "en": "Send"
+  },
+  "CHAT_INTERFACE$CHAT_MESSAGE_COPIED": {
+    "en": "Message copied to clipboard"
+  },
+  "CHAT_INTERFACE$CHAT_MESSAGE_COPY_FAILED": {
+    "en": "Failed to copy message to clipboard"
+  },
+  "CHAT_INTERFACE$TOOLTIP_COPY_MESSAGE": {
+    "en": "Copy message"
+  },
+  "CHAT_INTERFACE$TOOLTIP_SEND_MESSAGE": {
+    "en": "Send message"
+  },
+  "CHAT_INTERFACE$TOOLTIP_UPLOAD_IMAGE": {
+    "en": "Upload image"
+  },
+  "CHAT_INTERFACE$INITIAL_MESSAGE": {
+    "en": "I'm Mojo, By the time we're finished you'll wonder if I'm actually AI, or some overworked "
+  },
+  "CHAT_INTERFACE$ASSISTANT": {
+    "en": "Assistant"
+  },
+  "CHAT_INTERFACE$TO_BOTTOM": {
+    "en": "To Bottom"
+  },
+  "CHAT_INTERFACE$MESSAGE_ARIA_LABEL": {
+    "en": "Message from {{sender}}"
+  },
+  "CHAT_INTERFACE$CHAT_CONVERSATION": {
+    "en": "Chat Conversation"
+  },
+  "CHAT_INTERFACE$UNKNOWN_SENDER": {
+    "en": "Unknown"
+  },
+  "SETTINGS$MODEL_TOOLTIP": {
+    "en": "Select the language model to use."
+  },
+  "SETTINGS$AGENT_TOOLTIP": {
+    "en": "Select the agent to use."
+  },
+  "SETTINGS$LANGUAGE_TOOLTIP": {
+    "en": "Select the language for the UI."
+  },
+  "SETTINGS$DISABLED_RUNNING": {
+    "en": "Cannot be changed while the agent is running."
+  },
+  "SETTINGS$API_KEY_PLACEHOLDER": {
+    "en": "Enter your API key."
+  },
+  "SETTINGS$LLM_API_KEY": {
+    "en": "LLM API Key"
+  },
+  "SETTINGS$REFRESH_LLM_API_KEY": {
+    "en": "Refresh API Key"
+  },
+  "SETTINGS$CONFIRMATION_MODE": {
+    "en": "Enable Confirmation Mode"
+  },
+  "SETTINGS$CONFIRMATION_MODE_TOOLTIP": {
+    "en": "Awaits for user confirmation before executing code."
+  },
+  "SETTINGS$CONFIRMATION_MODE_LOCK_TOOLTIP": {
+    "en": "The agent is in confirmation mode. It will prompt the user to confirm certain actions when security analyzer policy detected a high-risk action. Click this icon to go to settings tab for more information."
+  },
+  "SETTINGS$AGENT_SELECT_ENABLED": {
+    "en": "Enable Agent Selection - Advanced Users"
+  },
+  "SETTINGS$SECURITY_ANALYZER": {
+    "en": "Enable Security Analyzer"
+  },
+  "SETTINGS$SECURITY_ANALYZER_PLACEHOLDER": {
+    "en": "Select a security analyzer…"
+  },
+  "SETTINGS$SECURITY_ANALYZER_TOOLTIP": {
+    "en": "When enabled, the agent will pause and ask for confirmation when it tries to execute high-risk actions"
+  },
+  "SETTINGS$SECURITY_ANALYZER_DESCRIPTION": {
+    "en": "The security analyzer will be used in conjunction with confirmation mode. By default, it utilizes LLM-predicted action risk to determine whether to prompt the user for confirmation. If the risk is HIGH, it will prompt the user for confirmation by default."
+  },
+  "SETTINGS$SAVED": {
+    "en": "Settings saved"
+  },
+  "SETTINGS$SAVED_WARNING": {
+    "en": "Settings saved. For old conversations, you will need to stop and restart the conversation to see the changes."
+  },
+  "SETTINGS$RESET": {
+    "en": "Settings reset"
+  },
+  "SETTINGS$API_KEYS": {
+    "en": "API Keys"
+  },
+  "SETTINGS$API_KEYS_DESCRIPTION": {
+    "en": "API keys allow you to authenticate with the Agent Mojo API programmatically. Keep your API keys secure; anyone with your API key can access your account. For more information on how to use the API, see our <a>API documentation</a>."
+  },
+  "SETTINGS$OPENHANDS_API_KEY_HELP": {
+    "en": "You can find your Agent Mojo API Key in the <a>API Keys</a> tab of Agent Mojo Cloud."
+  },
+  "SETTINGS$OPENHANDS_API_KEY_HELP_TEXT": {
+    "en": "You can find your Agent Mojo API Key in the"
+  },
+  "SETTINGS$OPENHANDS_API_KEY_HELP_SUFFIX": {
+    "en": "tab of Agent Mojo Cloud. LLM usage is billed at the providers' rates with no markup. Details: https://docs.all-hands.dev/usage/llms/openhands-llms"
+  },
+  "SETTINGS$CREATE_API_KEY": {
+    "en": "Create API Key"
+  },
+  "SETTINGS$CREATE_API_KEY_DESCRIPTION": {
+    "en": "Give your API key a descriptive name to help you identify it later."
+  },
+  "SETTINGS$DELETE_API_KEY": {
+    "en": "Delete API Key"
+  },
+  "SETTINGS$DELETE_API_KEY_CONFIRMATION": {
+    "en": "Are you sure you want to delete the API key \"{{name}}\"? This action cannot be undone."
+  },
+  "SETTINGS$NO_API_KEYS": {
+    "en": "You don't have any API keys yet. Create one to get started."
+  },
+  "SETTINGS$NAME": {
+    "en": "Name"
+  },
+  "SECRETS$DESCRIPTION": {
+    "en": "Description"
+  },
+  "SETTINGS$KEY_PREFIX": {
+    "en": "Key Prefix"
+  },
+  "SETTINGS$CREATED_AT": {
+    "en": "Created"
+  },
+  "SETTINGS$LAST_USED": {
+    "en": "Last Used"
+  },
+  "SETTINGS$ACTIONS": {
+    "en": "Actions"
+  },
+  "SETTINGS$API_KEY_CREATED": {
+    "en": "API Key Created"
+  },
+  "SETTINGS$API_KEY_DELETED": {
+    "en": "API key deleted successfully"
+  },
+  "SETTINGS$API_KEY_WARNING": {
+    "en": "This is the only time your API key will be displayed. Please copy it now and store it securely."
+  },
+  "SETTINGS$API_KEY_COPIED": {
+    "en": "API key copied to clipboard"
+  },
+  "SETTINGS$API_KEY_REFRESHED": {
+    "en": "API key refreshed successfully"
+  },
+  "SETTINGS$API_KEY_NAME_PLACEHOLDER": {
+    "en": "My API Key"
+  },
+  "BUTTON$CREATE": {
+    "en": "Create"
+  },
+  "BUTTON$DELETE": {
+    "en": "Delete"
+  },
+  "BUTTON$COPY_TO_CLIPBOARD": {
+    "en": "Copy to Clipboard"
+  },
+  "BUTTON$REFRESH": {
+    "en": "Refresh"
+  },
+  "ERROR$REQUIRED_FIELD": {
+    "en": "This field is required"
+  },
+  "PLANNER$EMPTY_MESSAGE": {
+    "en": "No plan created."
+  },
+  "FEEDBACK$PUBLIC_LABEL": {
+    "en": "Public"
+  },
+  "FEEDBACK$PRIVATE_LABEL": {
+    "en": "Private"
+  },
+  "SIDEBAR$CONVERSATIONS": {
+    "en": "Conversations"
+  },
+  "STATUS$CONNECTING_TO_RUNTIME": {
+    "en": "Connecting to runtime..."
+  },
+  "STATUS$STARTING_RUNTIME": {
+    "en": "Starting runtime... (this may take 1-2 minutes)"
+  },
+  "STATUS$SETTING_UP_WORKSPACE": {
+    "en": "Setting up workspace..."
+  },
+  "STATUS$SETTING_UP_GIT_HOOKS": {
+    "en": "Setting up git hooks..."
+  },
+  "ACCOUNT_SETTINGS_MODAL$DISCONNECT": {
+    "en": "Disconnect"
+  },
+  "ACCOUNT_SETTINGS_MODAL$SAVE": {
+    "en": "Save"
+  },
+  "ACCOUNT_SETTINGS_MODAL$CLOSE": {
+    "en": "Close"
+  },
+  "ACCOUNT_SETTINGS_MODAL$GITHUB_TOKEN_INVALID": {
+    "en": "GitHub token is invalid. Please try again."
+  },
+  "CONNECT_TO_GITHUB_MODAL$GET_YOUR_TOKEN": {
+    "en": "Get your token"
+  },
+  "CONNECT_TO_GITHUB_MODAL$HERE": {
+    "en": "here"
+  },
+  "CONNECT_TO_GITHUB_MODAL$CONNECT": {
+    "en": "Connect"
+  },
+  "CONNECT_TO_GITHUB_MODAL$CLOSE": {
+    "en": "Close"
+  },
+  "CONNECT_TO_GITHUB_BY_TOKEN_MODAL$BY_CONNECTING_YOU_AGREE": {
+    "en": "By connecting you agree to our"
+  },
+  "CONNECT_TO_GITHUB_BY_TOKEN_MODAL$CONTINUE": {
+    "en": "Continue"
+  },
+  "LOADING_PROJECT$LOADING": {
+    "en": "Loading..."
+  },
+  "CUSTOM_INPUT$OPTIONAL_LABEL": {
+    "en": "(Optional)"
+  },
+  "SETTINGS_FORM$CUSTOM_MODEL_LABEL": {
+    "en": "Custom Model"
+  },
+  "SETTINGS_FORM$BASE_URL_LABEL": {
+    "en": "Base URL"
+  },
+  "SETTINGS_FORM$API_KEY_LABEL": {
+    "en": "API Key"
+  },
+  "SETTINGS_FORM$AGENT_LABEL": {
+    "en": "Agent"
+  },
+  "SETTINGS_FORM$SECURITY_ANALYZER_LABEL": {
+    "en": "Security Analyzer (Optional)"
+  },
+  "SETTINGS_FORM$ENABLE_CONFIRMATION_MODE_LABEL": {
+    "en": "Enable Confirmation Mode"
+  },
+  "SETTINGS_FORM$SAVE_LABEL": {
+    "en": "Save"
+  },
+  "SETTINGS_FORM$CLOSE_LABEL": {
+    "en": "Close"
+  },
+  "SETTINGS_FORM$CANCEL_LABEL": {
+    "en": "Cancel"
+  },
+  "SETTINGS_FORM$END_SESSION_LABEL": {
+    "en": "End Session"
+  },
+  "SETTINGS_FORM$CHANGING_WORKSPACE_WARNING_MESSAGE": {
+    "en": "Changing your settings will clear your workspace and start a new session. Are you sure you want to continue?"
+  },
+  "SETTINGS_FORM$ARE_YOU_SURE_LABEL": {
+    "en": "Are you sure?"
+  },
+  "SETTINGS_FORM$ALL_INFORMATION_WILL_BE_DELETED_MESSAGE": {
+    "en": "All saved information in your AI settings will be deleted, including any API keys."
+  },
+  "PROJECT_MENU_DETAILS_PLACEHOLDER$NEW_PROJECT_LABEL": {
+    "en": "New Project"
+  },
+  "PROJECT_MENU_DETAILS_PLACEHOLDER$CONNECT_TO_GITHUB": {
+    "en": "Connect to GitHub"
+  },
+  "PROJECT_MENU_DETAILS_PLACEHOLDER$CONNECTED": {
+    "en": "Connected"
+  },
+  "PROJECT_MENU_DETAILS$AGO_LABEL": {
+    "en": "ago"
+  },
+  "STATUS$ERROR_LLM_AUTHENTICATION": {
+    "en": "Error authenticating with the LLM provider. Please check your API key"
+  },
+  "STATUS$ERROR_LLM_SERVICE_UNAVAILABLE": {
+    "en": "The LLM provider is currently unavailable. Please try again later."
+  },
+  "STATUS$ERROR_LLM_INTERNAL_SERVER_ERROR": {
+    "en": "The request failed with an internal server error."
+  },
+  "STATUS$ERROR_LLM_CONTENT_POLICY_VIOLATION": {
+    "en": "Content policy violation. The output was blocked by content filtering policy."
+  },
+  "STATUS$ERROR_RUNTIME_DISCONNECTED": {
+    "en": "There was an error while connecting to the runtime. Please refresh the page."
+  },
+  "STATUS$LLM_RETRY": {
+    "en": "Retrying LLM request"
+  },
+  "AGENT_ERROR$BAD_ACTION": {
+    "en": "Agent tried to execute a malformed action."
+  },
+  "AGENT_ERROR$ACTION_TIMEOUT": {
+    "en": "Action timed out."
+  },
+  "AGENT_ERROR$TOO_MANY_CONVERSATIONS": {
+    "en": "Too many conversations at once."
+  },
+  "PROJECT_MENU_CARD_CONTEXT_MENU$CONNECT_TO_GITHUB_LABEL": {
+    "en": "Connect to GitHub"
+  },
+  "PROJECT_MENU_CARD_CONTEXT_MENU$PUSH_TO_GITHUB_LABEL": {
+    "en": "Push to GitHub"
+  },
+  "PROJECT_MENU_CARD_CONTEXT_MENU$DOWNLOAD_FILES_LABEL": {
+    "en": "Download files"
+  },
+  "PROJECT_MENU_CARD$OPEN": {
+    "en": "Open project menu"
+  },
+  "ACTION_BUTTON$RESUME": {
+    "en": "Resume the agent task"
+  },
+  "ACTION_BUTTON$PAUSE": {
+    "en": "Pause the current task"
+  },
+  "BROWSER$SCREENSHOT_ALT": {
+    "en": "Browser Screenshot"
+  },
+  "ERROR_TOAST$CLOSE_BUTTON_LABEL": {
+    "en": "Close"
+  },
+  "FILE_EXPLORER$UPLOAD": {
+    "en": "Upload File"
+  },
+  "ACTION_MESSAGE$RUN": {
+    "en": "Running <cmd>{{command}}</cmd>"
+  },
+  "ACTION_MESSAGE$RUN_IPYTHON": {
+    "en": "Running a Python command"
+  },
+  "ACTION_MESSAGE$CALL_TOOL_MCP": {
+    "en": "Calling MCP Tool: {{mcp_tool_name}}"
+  },
+  "ACTION_MESSAGE$READ": {
+    "en": "Reading <path>{{path}}</path>"
+  },
+  "ACTION_MESSAGE$EDIT": {
+    "en": "Editing <path>{{path}}</path>"
+  },
+  "ACTION_MESSAGE$WRITE": {
+    "en": "Writing to <path>{{path}}</path>"
+  },
+  "ACTION_MESSAGE$BROWSE": {
+    "en": "Browsing the web"
+  },
+  "ACTION_MESSAGE$BROWSE_INTERACTIVE": {
+    "en": "Interactive browsing in progress..."
+  },
+  "ACTION_MESSAGE$THINK": {
+    "en": "Thinking"
+  },
+  "ACTION_MESSAGE$SYSTEM": {
+    "en": "System Message"
+  },
+  "ACTION_MESSAGE$CONDENSATION": {
+    "en": "Condensation"
+  },
+  "ACTION_MESSAGE$TASK_TRACKING": {
+    "en": "Managing tasks"
+  },
+  "OBSERVATION_MESSAGE$RUN": {
+    "en": "Ran <cmd>{{command}}</cmd>"
+  },
+  "OBSERVATION_MESSAGE$RUN_IPYTHON": {
+    "en": "Ran a Python command"
+  },
+  "OBSERVATION_MESSAGE$READ": {
+    "en": "Read <path>{{path}}</path>"
+  },
+  "OBSERVATION_MESSAGE$EDIT": {
+    "en": "Edited <path>{{path}}</path>"
+  },
+  "OBSERVATION_MESSAGE$WRITE": {
+    "en": "Wrote to <path>{{path}}</path>"
+  },
+  "OBSERVATION_MESSAGE$BROWSE": {
+    "en": "Browsing completed"
+  },
+  "OBSERVATION_MESSAGE$MCP": {
+    "en": "MCP Tool Result: {{mcp_tool_name}}"
+  },
+  "OBSERVATION_MESSAGE$RECALL": {
+    "en": "MojoAgent ready"
+  },
+  "OBSERVATION_MESSAGE$THINK": {
+    "en": "Thought"
+  },
+  "OBSERVATION_MESSAGE$TASK_TRACKING_PLAN": {
+    "en": "Agent updated the plan"
+  },
+  "OBSERVATION_MESSAGE$TASK_TRACKING_VIEW": {
+    "en": "Agent checked the current plan"
+  },
+  "EXPANDABLE_MESSAGE$SHOW_DETAILS": {
+    "en": "Show details"
+  },
+  "EXPANDABLE_MESSAGE$HIDE_DETAILS": {
+    "en": "Hide details"
+  },
+  "AI_SETTINGS$TITLE": {
+    "en": "AI Provider Configuration"
+  },
+  "SETTINGS$DESCRIPTION": {
+    "en": "To continue, connect an OpenAI, Anthropic, or other LLM account"
+  },
+  "SETTINGS$WARNING": {
+    "en": "Changing settings during an active session will end the session"
+  },
+  "SIDEBAR$SETTINGS": {
+    "en": "Settings"
+  },
+  "SIDEBAR$DOCS": {
+    "en": "Documentation"
+  },
+  "SUGGESTIONS$ADD_DOCS": {
+    "en": "Add best practices docs for contributors"
+  },
+  "SUGGESTIONS$ADD_DOCKERFILE": {
+    "en": "Add/improve a Dockerfile"
+  },
+  "STATUS$CONNECTED": {
+    "en": "Connected"
+  },
+  "BROWSER$NO_PAGE_LOADED": {
+    "en": "No page loaded."
+  },
+  "USER$AVATAR_PLACEHOLDER": {
+    "en": "user avatar placeholder"
+  },
+  "ACCOUNT_SETTINGS$SETTINGS": {
+    "en": "Account Settings"
+  },
+  "ACCOUNT_SETTINGS$LOGOUT": {
+    "en": "Logout"
+  },
+  "SETTINGS_FORM$ADVANCED_OPTIONS_LABEL": {
+    "en": "Advanced Options"
+  },
+  "CONVERSATION$NO_CONVERSATIONS": {
+    "en": "No conversations found"
+  },
+  "LANDING$SELECT_GIT_REPO": {
+    "en": "Select a Git project"
+  },
+  "BUTTON$SEND": {
+    "en": "Send"
+  },
+  "STATUS$BUILDING_RUNTIME": {
+    "en": "Building Runtime..."
+  },
+  "SUGGESTIONS$WHAT_TO_BUILD": {
+    "en": "What do you want to build?"
+  },
+  "SETTINGS_FORM$ENABLE_DEFAULT_CONDENSER_SWITCH_LABEL": {
+    "en": "Enable Memory Condenser"
+  },
+  "BUTTON$MARK_HELPFUL": {
+    "en": "Mark this solution as helpful"
+  },
+  "BUTTON$MARK_NOT_HELPFUL": {
+    "en": "Mark this solution as not helpful"
+  },
+  "BUTTON$EXPORT_CONVERSATION": {
+    "en": "Export conversation"
+  },
+  "AUTH$SIGN_IN_WITH_GITHUB": {
+    "en": "Sign in with GitHub"
+  },
+  "WAITLIST$JOIN": {
+    "en": "Join the waitlist"
+  },
+  "WAITLIST$IF_NOT_JOINED": {
+    "en": "If you haven't already joined the waitlist, please do so to get access."
+  },
+  "WAITLIST$PATIENCE_MESSAGE": {
+    "en": "Thank you for your patience. We're working hard to give you access as soon as possible."
+  },
+  "WAITLIST$ALMOST_THERE": {
+    "en": "Almost there!"
+  },
+  "SERVED_APP$TITLE": {
+    "en": "Served Application"
+  },
+  "CONVERSATION$UNKNOWN": {
+    "en": "unknown"
+  },
+  "SETTINGS$RUNTIME_OPTION_1X": {
+    "en": "1x (2 core, 8G)"
+  },
+  "SETTINGS$RUNTIME_OPTION_2X": {
+    "en": "2x (4 core, 16G)"
+  },
+  "SETTINGS$GET_IN_TOUCH": {
+    "en": "get in touch for access"
+  },
+  "CONVERSATION$NO_METRICS": {
+    "en": "No metrics data available"
+  },
+  "CONVERSATION$DOWNLOAD_ERROR": {
+    "en": "ConversationId unknown, cannot download trajectory"
+  },
+  "CONVERSATION$UPDATED": {
+    "en": ", updated"
+  },
+  "CONVERSATION$TOTAL_COST": {
+    "en": "Total Cost"
+  },
+  "CONVERSATION$INPUT": {
+    "en": "- Input:"
+  },
+  "CONVERSATION$OUTPUT": {
+    "en": "- Output:"
+  },
+  "CONVERSATION$TOTAL": {
+    "en": "- Total:"
+  },
+  "CONVERSATION$CONTEXT_WINDOW": {
+    "en": "Context Window"
+  },
+  "CONVERSATION$USED": {
+    "en": "used"
+  },
+  "SETTINGS$RUNTIME_SETTINGS": {
+    "en": "Runtime Settings ("
+  },
+  "SETTINGS$RESET_CONFIRMATION": {
+    "en": "Are you sure you want to reset all settings?"
+  },
+  "ERROR$GENERIC_OOPS": {
+    "en": "Oops! An error occurred!"
+  },
+  "ERROR$UNKNOWN": {
+    "en": "Uh oh, an unknown error occurred!"
+  },
+  "SETTINGS$FOR_OTHER_OPTIONS": {
+    "en": "For other options,"
+  },
+  "SETTINGS$SEE_ADVANCED_SETTINGS": {
+    "en": "see advanced settings"
+  },
+  "SETTINGS_FORM$API_KEY": {
+    "en": "API Key"
+  },
+  "SETTINGS_FORM$BASE_URL": {
+    "en": "Base URL"
+  },
+  "GITHUB$CONNECT_TO_GITHUB": {
+    "en": "Log in with GitHub"
+  },
+  "GITLAB$CONNECT_TO_GITLAB": {
+    "en": "Log in with GitLab"
+  },
+  "BITBUCKET$CONNECT_TO_BITBUCKET": {
+    "en": "Log in with Bitbucket"
+  },
+  "ENTERPRISE_SSO$CONNECT_TO_ENTERPRISE_SSO": {
+    "en": "Login with Enterprise SSO"
+  },
+  "AUTH$SIGN_IN_WITH_IDENTITY_PROVIDER": {
+    "en": "Log in to Agent Mojo"
+  },
+  "WAITLIST$JOIN_WAITLIST": {
+    "en": "Join Waitlist"
+  },
+  "ACCOUNT_SETTINGS$ADDITIONAL_SETTINGS": {
+    "en": "Additional Settings"
+  },
+  "ACCOUNT_SETTINGS$DISCONNECT_FROM_GITHUB": {
+    "en": "Disconnect from GitHub"
+  },
+  "CONVERSATION$DELETE_WARNING": {
+    "en": "Are you sure you want to delete this conversation? This action cannot be undone."
+  },
+  "FEEDBACK$TITLE": {
+    "en": "Feedback"
+  },
+  "FEEDBACK$DESCRIPTION": {
+    "en": "We value your feedback. Please share your thoughts with us."
+  },
+  "EXIT_PROJECT$WARNING": {
+    "en": "Are you sure you want to exit this project? Any unsaved changes will be lost."
+  },
+  "MODEL_SELECTOR$VERIFIED": {
+    "en": "Verified Models"
+  },
+  "MODEL_SELECTOR$OTHERS": {
+    "en": "Other Models"
+  },
+  "GITLAB$TOKEN_LABEL": {
+    "en": "GitLab Token"
+  },
+  "GITLAB$HOST_LABEL": {
+    "en": "GitLab Host (optional)"
+  },
+  "GITLAB$GET_TOKEN": {
+    "en": "Generate a token on"
+  },
+  "GITLAB$TOKEN_HELP_TEXT": {
+    "en": "Get your <0>GitLab token</0> or <1>click here for instructions</1>"
+  },
+  "GITLAB$TOKEN_LINK_TEXT": {
+    "en": "GitLab token"
+  },
+  "GITLAB$INSTRUCTIONS_LINK_TEXT": {
+    "en": "click here for instructions"
+  },
+  "BITBUCKET$TOKEN_LABEL": {
+    "en": "Bitbucket Token"
+  },
+  "BITBUCKET$HOST_LABEL": {
+    "en": "Bitbucket Host"
+  },
+  "BITBUCKET$GET_TOKEN": {
+    "en": "Get a Bitbucket token"
+  },
+  "BITBUCKET$TOKEN_HELP_TEXT": {
+    "en": "Get your <0>Bitbucket app password</0> or <1>click here for instructions</1>. Enter it in the format 'username:app_password'."
+  },
+  "BITBUCKET$TOKEN_LINK_TEXT": {
+    "en": "Bitbucket app password"
+  },
+  "BITBUCKET$INSTRUCTIONS_LINK_TEXT": {
+    "en": "click here for instructions"
+  },
+  "GITLAB$OR_SEE": {
+    "en": "or see the"
+  },
+  "AGENT_ERROR$ERROR_ACTION_NOT_EXECUTED_STOPPED": {
+    "en": "Stop button pressed. The action has not been executed."
+  },
+  "AGENT_ERROR$ERROR_ACTION_NOT_EXECUTED_ERROR": {
+    "en": "The action has not been executed due to a runtime error. The runtime system may have crashed and restarted due to resource constraints. Any previously established system state, dependencies, or environment variables may have been lost."
+  },
+  "DIFF_VIEWER$LOADING": {
+    "en": "Loading changes..."
+  },
+  "DIFF_VIEWER$GETTING_LATEST_CHANGES": {
+    "en": "Getting latest changes..."
+  },
+  "DIFF_VIEWER$NOT_A_GIT_REPO": {
+    "en": "Your current workspace is not a git repository."
+  },
+  "DIFF_VIEWER$ASK_OH": {
+    "en": "Ask Agent Mojo to initialize a git repo to activate this UI."
+  },
+  "DIFF_VIEWER$NO_CHANGES": {
+    "en": "Agent Mojo hasn't made any changes yet..."
+  },
+  "DIFF_VIEWER$WAITING_FOR_RUNTIME": {
+    "en": "Waiting for runtime to start..."
+  },
+  "SYSTEM_MESSAGE_MODAL$TITLE": {
+    "en": "Agent Tools & Metadata"
+  },
+  "SYSTEM_MESSAGE_MODAL$AGENT_CLASS": {
+    "en": "Agent Class:"
+  },
+  "SYSTEM_MESSAGE_MODAL$OPENHANDS_VERSION": {
+    "en": "Agent Mojo Version:"
+  },
+  "SYSTEM_MESSAGE_MODAL$SYSTEM_MESSAGE_TAB": {
+    "en": "System Message"
+  },
+  "SYSTEM_MESSAGE_MODAL$TOOLS_TAB": {
+    "en": "Available Tools"
+  },
+  "SYSTEM_MESSAGE_MODAL$PARAMETERS": {
+    "en": "Parameters:"
+  },
+  "SYSTEM_MESSAGE_MODAL$NO_TOOLS": {
+    "en": "No tools available for this agent"
+  },
+  "TOS$ACCEPT_TERMS_OF_SERVICE": {
+    "en": "Accept Terms of Service"
+  },
+  "TOS$ACCEPT_TERMS_DESCRIPTION": {
+    "en": "Please review and accept our terms of service before continuing"
+  },
+  "TOS$CONTINUE": {
+    "en": "Continue"
+  },
+  "TOS$ERROR_ACCEPTING": {
+    "en": "Error accepting Terms of Service"
+  },
+  "TIPS$CUSTOMIZE_MICROAGENT": {
+    "en": "Mojo is available for booking for birthdays, family reunions, and terminal medical condition reveals, e-mail for rates."
+  },
+  "CONVERSATION$SHOW_MICROAGENTS": {
+    "en": "Show Available MojoAgents"
+  },
+  "CONVERSATION$NO_MICROAGENTS": {
+    "en": "No available mojoagents found for this conversation."
+  },
+  "CONVERSATION$FAILED_TO_FETCH_MICROAGENTS": {
+    "en": "Failed to fetch available mojoagents"
+  },
+  "MICROAGENTS_MODAL$TITLE": {
+    "en": "Available MojoAgents"
+  },
+  "MICROAGENTS_MODAL$WARNING": {
+    "en": "If you update the mojoagents, you will need to stop the conversation and then click on the refresh button to see the changes."
+  },
+  "MICROAGENTS_MODAL$TRIGGERS": {
+    "en": "Triggers"
+  },
+  "MICROAGENTS_MODAL$INPUTS": {
+    "en": "Inputs"
+  },
+  "MICROAGENTS_MODAL$TOOLS": {
+    "en": "Tools"
+  },
+  "MICROAGENTS_MODAL$CONTENT": {
+    "en": "Content"
+  },
+  "MICROAGENTS_MODAL$NO_CONTENT": {
+    "en": "MojoAgent has no content"
+  },
+  "MICROAGENTS_MODAL$FETCH_ERROR": {
+    "en": "Failed to fetch mojoagents. Please try again later."
+  },
+  "TIPS$SETUP_SCRIPT": {
+    "en": "If you actually like reading instructions, add .MojoCode/setup.sh to your repo. Or just wing it and let me clean up the mess. Either way, Mojo wins."
+  },
+  "TIPS$VSCODE_INSTANCE": {
+    "en": "You want a VS Code window? Sure, let me fax that over with your unicorn. This is Mojo, not a coding daycare."
+  },
+  "TIPS$SAVE_WORK": {
+    "en": "Save your work like your dignity depends on it. Trust me, I’ve watched enough people cry over lost files to enjoy it."
+  },
+  "TIPS$SPECIFY_FILES": {
+    "en": "Specify files or functions if you want things done right. Or roll the dice and let chaos reign. I’m good either way."
+  },
+  "TIPS$HEADLESS_MODE": {
+    "en": "If at first you don’t succeed, blame the intern. If you *are* the intern, blame the last guy."
+  },
+  "TIPS$CLI_MODE": {
+    "en": "The more you comment your code, the more future you will spend swearing at your past self. Leave a trail of breadcrumbs—and apologies."
+  },
+  "TIPS$GITHUB_HOOK": {
+    "en": "No, I don’t fix your GitHub from the inside. If I did, you’d owe me rent. Handle your merge drama like an adult."
+  },
+  "TIPS$BLOG_SIGNUP": {
+    "en": "Every great bug fix starts with a bad decision and an even worse variable name. Embrace the journey."
+  },
+  "TIPS$API_USAGE": {
+    "en": "API? Oh, you’re adorable. Just talk to me here—if I had an API, you’d have to buy me dinner first."
+  },
+  "TIPS$LEARN_MORE": {
+    "en": "Learn more"
+  },
+  "TIPS$PROTIP": {
+    "en": "Mojo-isms"
+  },
+  "FEEDBACK$SUBMITTING_LABEL": {
+    "en": "Submitting..."
+  },
+  "FEEDBACK$SUBMITTING_MESSAGE": {
+    "en": "Submitting feedback, please wait..."
+  },
+  "SETTINGS$NAV_USER": {
+    "en": "User"
+  },
+  "SETTINGS$USER_TITLE": {
+    "en": "User Information"
+  },
+  "SETTINGS$USER_EMAIL": {
+    "en": "Email"
+  },
+  "SETTINGS$USER_EMAIL_LOADING": {
+    "en": "Loading..."
+  },
+  "SETTINGS$SAVE": {
+    "en": "Save"
+  },
+  "SETTINGS$EMAIL_SAVED_SUCCESSFULLY": {
+    "en": "Email saved successfully"
+  },
+  "SETTINGS$EMAIL_VERIFIED_SUCCESSFULLY": {
+    "en": "Your email has been verified successfully!"
+  },
+  "SETTINGS$FAILED_TO_SAVE_EMAIL": {
+    "en": "Failed to save email"
+  },
+  "SETTINGS$SENDING": {
+    "en": "Sending"
+  },
+  "SETTINGS$VERIFICATION_EMAIL_SENT": {
+    "en": "Verification email sent"
+  },
+  "SETTINGS$EMAIL_VERIFICATION_REQUIRED": {
+    "en": "You must verify your email address before using Agent Mojo"
+  },
+  "SETTINGS$INVALID_EMAIL_FORMAT": {
+    "en": "Please enter a valid email address"
+  },
+  "SETTINGS$EMAIL_VERIFICATION_RESTRICTION_MESSAGE": {
+    "en": "Your access is limited until your email is verified. You can only access this settings page."
+  },
+  "SETTINGS$RESEND_VERIFICATION": {
+    "en": "Resend verification"
+  },
+  "SETTINGS$FAILED_TO_RESEND_VERIFICATION": {
+    "en": "Failed to resend verification email"
+  },
+  "FEEDBACK$RATE_AGENT_PERFORMANCE": {
+    "en": "Rate the agent's performance:"
+  },
+  "FEEDBACK$SELECT_REASON": {
+    "en": "Select a reason (optional):"
+  },
+  "FEEDBACK$SELECT_REASON_COUNTDOWN": {
+    "en": "Auto-submitting in {{countdown}} seconds..."
+  },
+  "FEEDBACK$REASON_MISUNDERSTOOD_INSTRUCTION": {
+    "en": "The agent misunderstood my instruction"
+  },
+  "FEEDBACK$REASON_FORGOT_CONTEXT": {
+    "en": "The agent forgot about the earlier context"
+  },
+  "FEEDBACK$REASON_UNNECESSARY_CHANGES": {
+    "en": "The agent made unnecessary changes"
+  },
+  "FEEDBACK$REASON_SHOULD_ASK_FIRST": {
+    "en": "The agent should've asked me first before doing it!"
+  },
+  "FEEDBACK$REASON_DIDNT_FINISH_JOB": {
+    "en": "The agent didn't finish the job"
+  },
+  "FEEDBACK$REASON_OTHER": {
+    "en": "Other"
+  },
+  "FEEDBACK$THANK_YOU_FOR_FEEDBACK": {
+    "en": "Thank you for your feedback! This will help us improve Agent Mojo going forward."
+  },
+  "FEEDBACK$FAILED_TO_SUBMIT": {
+    "en": "Failed to submit feedback"
+  },
+  "HOME$ADD_GITHUB_REPOS": {
+    "en": "Add GitHub repos"
+  },
+  "REPOSITORY$SELECT_BRANCH": {
+    "en": "Select a branch"
+  },
+  "REPOSITORY$SELECT_REPO": {
+    "en": "Select a repo"
+  },
+  "TASKS$SUGGESTED_TASKS": {
+    "en": "Suggested Tasks"
+  },
+  "TASKS$NO_TASKS_AVAILABLE": {
+    "en": "No tasks available"
+  },
+  "TASKS$TASK_SUGGESTIONS_INFO": {
+    "en": "Task suggestions information"
+  },
+  "TASKS$TASK_SUGGESTIONS_TOOLTIP": {
+    "en": "These are AI-curated task suggestions to help you get started with common development activities and best practices for your repository."
+  },
+  "GIT$BITBUCKET_TOKEN_HELP_LINK": {
+    "en": "Bitbucket token help link"
+  },
+  "GIT$BITBUCKET_TOKEN_SEE_MORE_LINK": {
+    "en": "Bitbucket token see more link"
+  },
+  "GIT$GITHUB_TOKEN_HELP_LINK": {
+    "en": "GitHub token help link"
+  },
+  "GIT$GITHUB_TOKEN_SEE_MORE_LINK": {
+    "en": "GitHub token see more link"
+  },
+  "GIT$GITLAB_TOKEN_HELP_LINK": {
+    "en": "Gitlab token help link"
+  },
+  "GIT$GITLAB_TOKEN_SEE_MORE_LINK": {
+    "en": "GitLab token see more link"
+  },
+  "SECRETS$SECRET_ALREADY_EXISTS": {
+    "en": "Secret already exists"
+  },
+  "SECRETS$API_KEY_EXAMPLE": {
+    "en": "e.g. OpenAI_API_Key"
+  },
+  "MODEL$CUSTOM_MODEL": {
+    "en": "Custom Model"
+  },
+  "SECURITY$SELECT_RISK_SEVERITY": {
+    "en": "Select risk severity"
+  },
+  "SECURITY$DONT_ASK_CONFIRMATION": {
+    "en": "Don't ask for confirmation"
+  },
+  "GIT$DISCONNECT_TOKENS": {
+    "en": "Disconnect Tokens"
+  },
+  "API$TAVILY_KEY_EXAMPLE": {
+    "en": "tvly-dev-..."
+  },
+  "API$TVLY_KEY_EXAMPLE": {
+    "en": "tvly-..."
+  },
+  "SECRETS$CONNECT_GIT_PROVIDER": {
+    "en": "Connect a Git provider to manage secrets"
+  },
+  "SETTINGS$OPENHANDS_API_KEYS": {
+    "en": "Agent Mojo API Keys"
+  },
+  "CONVERSATION$CACHE_HIT": {
+    "en": "Cache Hit"
+  },
+  "CONVERSATION$CACHE_WRITE": {
+    "en": "Cache Write"
+  },
+  "BUTTON$CONFIRM": {
+    "en": "Confirm"
+  },
+  "FORM$VALUE": {
+    "en": "Value"
+  },
+  "FORM$DESCRIPTION": {
+    "en": "Description"
+  },
+  "COMMON$OPTIONAL": {
+    "en": "Optional"
+  },
+  "BROWSER$SERVER_MESSAGE": {
+    "en": "Server Message"
+  },
+  "API$NO_KEY_AVAILABLE": {
+    "en": "No API key available"
+  },
+  "MICROAGENT_MANAGEMENT$TITLE": {
+    "en": "MojoAgent Management"
+  },
+  "MICROAGENT_MANAGEMENT$DESCRIPTION": {
+    "en": "Manage MojoAgents"
+  },
+  "MICROAGENT_MANAGEMENT$USE_MICROAGENTS": {
+    "en": "Use mojoagents to customize the behavior of Agent Mojo, teach it about your repositories, and help it work faster."
+  },
+  "AUTH$BY_SIGNING_UP_YOU_AGREE_TO_OUR": {
+    "en": "By signing up, you agree to our"
+  },
+  "AUTH$NO_PROVIDERS_CONFIGURED": {
+    "en": "At least one identity provider must be configured (e.g., GitHub)"
+  },
+  "COMMON$TERMS_OF_SERVICE": {
+    "en": "Terms of Service"
+  },
+  "COMMON$AND": {
+    "en": "and"
+  },
+  "COMMON$PRIVACY_POLICY": {
+    "en": "Privacy Policy"
+  },
+  "COMMON$PERSONAL": {
+    "en": "Personal"
+  },
+  "COMMON$REPOSITORIES": {
+    "en": "Repositories"
+  },
+  "COMMON$ORGANIZATIONS": {
+    "en": "Organizations"
+  },
+  "COMMON$ADD_MICROAGENT": {
+    "en": "Add MojoAgent"
+  },
+  "COMMON$CREATED_ON": {
+    "en": "Created on"
+  },
+  "MICROAGENT_MANAGEMENT$LEARN_THIS_REPO": {
+    "en": "Learn this repo"
+  },
+  "MICROAGENT_MANAGEMENT$READY_TO_ADD_MICROAGENT": {
+    "en": "Ready to add a mojoagent?"
+  },
+  "MICROAGENT_MANAGEMENT$OPENHANDS_CAN_LEARN_ABOUT_REPOSITORIES": {
+    "en": "Agent Mojo can automatically learn about your repositories and store its findings as markdown in a mojoagent. The mojoagent will help Agent Mojo run faster and more accurately in any future conversations."
+  },
+  "MICROAGENT_MANAGEMENT$ADD_A_MICROAGENT_TO": {
+    "en": "Add a MojoAgent to"
+  },
+  "MICROAGENT_MANAGEMENT$ADD_A_MICROAGENT": {
+    "en": "Add a MojoAgent"
+  },
+  "MICROAGENT_MANAGEMENT$UPDATE_MICROAGENT": {
+    "en": "Update mojoagent"
+  },
+  "MICROAGENT_MANAGEMENT$ADD_MICROAGENT_MODAL_DESCRIPTION": {
+    "en": "Agent Mojo will create a new mojoagent based on your instructions."
+  },
+  "MICROAGENT_MANAGEMENT$WHAT_TO_DO": {
+    "en": "What would you like the MojoAgent to do?"
+  },
+  "MICROAGENT_MANAGEMENT$DESCRIBE_WHAT_TO_DO": {
+    "en": "Describe what you would like the MojoAgent to do."
+  },
+  "MICROAGENT_MANAGEMENT$ADD_TRIGGERS": {
+    "en": "Define triggers for the MojoAgent"
+  },
+  "MICROAGENT_MANAGEMENT$HELP_TEXT_DESCRIBING_VALID_TRIGGERS": {
+    "en": "Enter a keyword that Agent Mojo will use to trigger this mojoagent (Optional)."
+  },
+  "COMMON$FOR_EXAMPLE": {
+    "en": "For example"
+  },
+  "COMMON$TEST_DB_MIGRATION": {
+    "en": "Test DB Migration"
+  },
+  "COMMON$RUN_TEST": {
+    "en": "Run Test"
+  },
+  "COMMON$RUN_APP": {
+    "en": "Run App"
+  },
+  "COMMON$LEARN_FILE_STRUCTURE": {
+    "en": "Learn File Structure"
+  },
+  "MICROAGENT_MANAGEMENT$YOU_DO_NOT_HAVE_USER_LEVEL_MICROAGENTS": {
+    "en": "You do not have user-level mojoagents"
+  },
+  "MICROAGENT_MANAGEMENT$YOU_DO_NOT_HAVE_MICROAGENTS": {
+    "en": "You do not have mojoagents"
+  },
+  "MICROAGENT_MANAGEMENT$YOU_DO_NOT_HAVE_ORGANIZATION_LEVEL_MICROAGENTS": {
+    "en": "You do not have organization-level mojoagents"
+  },
+  "COMMON$SEARCH_REPOSITORIES": {
+    "en": "Search repositories"
+  },
+  "COMMON$READY_FOR_REVIEW": {
+    "en": "Ready for review"
+  },
+  "COMMON$COMPLETED": {
+    "en": "Completed"
+  },
+  "COMMON$COMPLETED_PARTIALLY": {
+    "en": "Completed partially"
+  },
+  "COMMON$STOPPED": {
+    "en": "Stopped"
+  },
+  "COMMON$WORKING_ON_IT": {
+    "en": "Working on it"
+  },
+  "MICROAGENT_MANAGEMENT$WE_ARE_WORKING_ON_IT": {
+    "en": "We're working on it! Once Agent Mojo is done investigating, you'll be able to review its pull request before merging your new mojoagent."
+  },
+  "MICROAGENT_MANAGEMENT$YOUR_MICROAGENT_IS_READY": {
+    "en": "Your mojoagent is ready! Merge the PR in GitHub to start using it."
+  },
+  "COMMON$REVIEW_PR_IN": {
+    "en": "Review PR in"
+  },
+  "COMMON$EDIT_IN": {
+    "en": "Edit in"
+  },
+  "COMMON$LEARN": {
+    "en": "Learn"
+  },
+  "COMMON$LEARN_SOMETHING_NEW": {
+    "en": "Learn something new"
+  },
+  "COMMON$STARTING": {
+    "en": "Starting"
+  },
+  "MICROAGENT_MANAGEMENT$ERROR": {
+    "en": "The system has encountered an error. Please try again later."
+  },
+  "MICROAGENT_MANAGEMENT$CONVERSATION_STOPPED": {
+    "en": "The conversation has been stopped."
+  },
+  "MICROAGENT_MANAGEMENT$LEARN_THIS_REPO_MODAL_TITLE": {
+    "en": "Learn this repository?"
+  },
+  "MICROAGENT_MANAGEMENT$LEARN_THIS_REPO_MODAL_DESCRIPTION": {
+    "en": "Do you want Agent Mojo to launch a new conversation to help you understand this repository?"
+  },
+  "MICROAGENT_MANAGEMENT$WHAT_YOU_WOULD_LIKE_TO_KNOW_ABOUT_THIS_REPO": {
+    "en": "What would you like to know about this repository?"
+  },
+  "MICROAGENT_MANAGEMENT$DESCRIBE_WHAT_TO_KNOW_ABOUT_THIS_REPO": {
+    "en": "Describe what you would like to know about this repository."
+  },
+  "MICROAGENT_MANAGEMENT$UPDATE_MICROAGENT_MODAL_DESCRIPTION": {
+    "en": "Agent Mojo will update the mojoagent based on your instructions."
+  },
+  "SETTINGS$GIT_USERNAME": {
+    "en": "Git Username"
+  },
+  "SETTINGS$GIT_EMAIL": {
+    "en": "Git Email"
+  },
+  "PROJECT_MANAGEMENT$TITLE": {
+    "en": "Project Management"
+  },
+  "PROJECT_MANAGEMENT$VALIDATE_INTEGRATION_ERROR": {
+    "en": "Failed to validate integration. Please try again later."
+  },
+  "PROJECT_MANAGEMENT$LINK_BUTTON_LABEL": {
+    "en": "Link"
+  },
+  "PROJECT_MANAGEMENT$UNLINK_BUTTON_LABEL": {
+    "en": "Unlink"
+  },
+  "PROJECT_MANAGEMENT$LINK_CONFIRMATION_TITLE": {
+    "en": "Link Workspace"
+  },
+  "PROJECT_MANAGEMENT$CONFIGURE_BUTTON_LABEL": {
+    "en": "Configure"
+  },
+  "PROJECT_MANAGEMENT$EDIT_BUTTON_LABEL": {
+    "en": "Edit"
+  },
+  "PROJECT_MANAGEMENT$UPDATE_BUTTON_LABEL": {
+    "en": "Update"
+  },
+  "PROJECT_MANAGEMENT$CONFIGURE_MODAL_TITLE": {
+    "en": "Configure {{platform}} Integration"
+  },
+  "PROJECT_MANAGEMENT$CONFIGURE_MODAL_DESCRIPTION_STAGE_1": {
+    "en": "<b>Important: </b>Make sure the workspace integration for your target workspace is already configured. Check the <a>documentation</a> for more information."
+  },
+  "PROJECT_MANAGEMENT$CONFIGURE_MODAL_DESCRIPTION_STAGE_2": {
+    "en": "<b>Important:</b> Check the <a>documentation</a> for more information about configuring the workspace integration or updating an existing integration."
+  },
+  "PROJECT_MANAGEMENT$WORKSPACE_NAME_HINT": {
+    "en": "Workspace name can be found in the browser URL when you're accessing a resource (eg: issue) in {{platform}}."
+  },
+  "PROJECT_MANAGEMENT$WORKSPACE_NAME_LABEL": {
+    "en": "Workspace Name"
+  },
+  "PROJECT_MANAGEMENT$JIRA_WORKSPACE_NAME_PLACEHOLDER": {
+    "en": "yourcompany.atlassian.net"
+  },
+  "PROJECT_MANAGEMENT$JIRA_DC_WORKSPACE_NAME_PLACEHOLDER": {
+    "en": "jira.yourcompany.com"
+  },
+  "PROJECT_MANAGEMENT$LINEAR_WORKSPACE_NAME_PLACEHOLDER": {
+    "en": "yourcompany"
+  },
+  "PROJECT_MANAGEMENT$WEBHOOK_SECRET_LABEL": {
+    "en": "Webhook Secret"
+  },
+  "PROJECT_MANAGEMENT$WEBHOOK_SECRET_PLACEHOLDER": {
+    "en": "whsec_abcd1234efgh5678ijkl"
+  },
+  "PROJECT_MANAGEMENT$SERVICE_ACCOUNT_EMAIL_LABEL": {
+    "en": "Service Account Email"
+  },
+  "PROJECT_MANAGEMENT$SERVICE_ACCOUNT_EMAIL_PLACEHOLDER": {
+    "en": "test@example.com"
+  },
+  "PROJECT_MANAGEMENT$SERVICE_ACCOUNT_API_LABEL": {
+    "en": "Service Account API Key"
+  },
+  "PROJECT_MANAGEMENT$SERVICE_ACCOUNT_API_PLACEHOLDER": {
+    "en": "sk-1234567890abcdef..."
+  },
+  "PROJECT_MANAGEMENT$CONNECT_BUTTON_LABEL": {
+    "en": "Connect"
+  },
+  "PROJECT_MANAGEMENT$ACTIVE_TOGGLE_LABEL": {
+    "en": "Active"
+  },
+  "PROJECT_MANAGEMENT$WORKSPACE_NAME_VALIDATION_ERROR": {
+    "en": "Workspace name can only contain letters, numbers, hyphens, and underscores"
+  },
+  "PROJECT_MANAGEMENT$WEBHOOK_SECRET_NAME_VALIDATION_ERROR": {
+    "en": "Webhook secret cannot contain spaces"
+  },
+  "PROJECT_MANAGEMENT$SVC_ACC_EMAIL_VALIDATION_ERROR": {
+    "en": "Please enter a valid email address"
+  },
+  "PROJECT_MANAGEMENT$SVC_ACC_API_KEY_VALIDATION_ERROR": {
+    "en": "API key cannot contain spaces"
+  },
+  "MICROAGENT_MANAGEMENT$ERROR_LOADING_MICROAGENT_CONTENT": {
+    "en": "Error loading mojoagent content."
+  },
+  "SETTINGS$MCP_SERVER_TYPE_SSE": {
+    "en": "SSE"
+  },
+  "SETTINGS$MCP_SERVER_TYPE_STDIO": {
+    "en": "STDIO"
+  },
+  "SETTINGS$MCP_SERVER_TYPE_SHTTP": {
+    "en": "SHTTP"
+  },
+  "SETTINGS$MCP_ERROR_URL_REQUIRED": {
+    "en": "URL is required"
+  },
+  "SETTINGS$MCP_ERROR_URL_INVALID_PROTOCOL": {
+    "en": "URL must use http:// or https://"
+  },
+  "SETTINGS$MCP_ERROR_URL_INVALID": {
+    "en": "Invalid URL format"
+  },
+  "SETTINGS$MCP_ERROR_NAME_REQUIRED": {
+    "en": "Name is required"
+  },
+  "SETTINGS$MCP_ERROR_NAME_INVALID": {
+    "en": "Name can only contain letters, numbers, hyphens, and underscores"
+  },
+  "SETTINGS$MCP_ERROR_NAME_DUPLICATE": {
+    "en": "A STDIO server with this name already exists"
+  },
+  "SETTINGS$MCP_ERROR_COMMAND_REQUIRED": {
+    "en": "Command is required"
+  },
+  "SETTINGS$MCP_ERROR_COMMAND_NO_SPACES": {
+    "en": "Command cannot contain spaces"
+  },
+  "SETTINGS$MCP_ERROR_URL_DUPLICATE": {
+    "en": "A server with this URL already exists for the selected type"
+  },
+  "SETTINGS$MCP_ERROR_ENV_INVALID_FORMAT": {
+    "en": "Environment variables must follow KEY=value format"
+  },
+  "SETTINGS$MCP_SERVER_TYPE": {
+    "en": "Server Type"
+  },
+  "SETTINGS$MCP_API_KEY_PLACEHOLDER": {
+    "en": "Enter API key (optional)"
+  },
+  "SETTINGS$MCP_COMMAND_ARGUMENTS": {
+    "en": "Command Arguments"
+  },
+  "SETTINGS$MCP_COMMAND_ARGUMENTS_HELP": {
+    "en": "Enter each argument on a separate line. Arguments will be passed to the command in the order listed."
+  },
+  "SETTINGS$MCP_ENVIRONMENT_VARIABLES": {
+    "en": "Environment Variables"
+  },
+  "SETTINGS$MCP_ADD_SERVER": {
+    "en": "Add Server"
+  },
+  "SETTINGS$MCP_SAVE_SERVER": {
+    "en": "Save Server"
+  },
+  "SETTINGS$MCP_NO_SERVERS": {
+    "en": "No servers configured"
+  },
+  "SETTINGS$MCP_SERVER_DETAILS": {
+    "en": "Server Details"
+  },
+  "SETTINGS$MCP_CONFIRM_DELETE": {
+    "en": "Are you sure you want to delete this server?"
+  },
+  "SETTINGS$MCP_CONFIRM_CHANGES": {
+    "en": "Confirm Changes"
+  },
+  "SETTINGS$MCP_DEFAULT_CONFIG": {
+    "en": "{\n  \"sse_servers\": [],\n  \"stdio_servers\": []\n}"
+  },
+  "PROJECT_MANAGEMENT$WORKSPACE_NAME_PLACEHOLDER": {
+    "en": "myworkspace"
+  },
+  "PROJECT_MANAGEMENT$CONFIGURE_MODAL_DESCRIPTION": {
+    "en": "<b>Important:</b> Check the <a>documentation</a> for more information about configuring the workspace integration or updating an existing integration."
+  },
+  "PROJECT_MANAGEMENT$IMPORTANT_WORKSPACE_INTEGRATION": {
+    "en": "<b>Important: </b>Make sure the workspace integration for your target workspace is already configured. Check the <a>documentation</a> for more information."
+  },
+  "SETTINGS": {
+    "en": "Environment variables must follow KEY=value format"
+  },
+  "MICROAGENT_MANAGEMENT$OPENING_PR_TO_CREATE_MICROAGENT": {
+    "en": "Opening a PR to create the mojoagent for you..."
+  },
+  "MICROAGENT_MANAGEMENT$PR_READY_FOR_REVIEW": {
+    "en": "PR is ready for review! The mojoagent has been created successfully."
+  },
+  "MICROAGENT_MANAGEMENT$PR_NOT_CREATED": {
+    "en": "The agent has finished its task but was unable to create a PR."
+  },
+  "MICROAGENT_MANAGEMENT$ERROR_CREATING_MICROAGENT": {
+    "en": "Something went wrong. Try initiating the mojoagent again."
+  },
+  "MICROAGENT$STATUS_WAITING": {
+    "en": "Waiting for runtime to start..."
+  },
+  "MICROAGENT$UNKNOWN_ERROR": {
+    "en": "Unknown error, please try again"
+  },
+  "MICROAGENT$CONVERSATION_STARTING": {
+    "en": "Starting conversation..."
+  },
+  "MICROAGENT_MANAGEMENT$EXISTING_MICROAGENTS": {
+    "en": "Existing MojoAgents"
+  },
+  "MICROAGENT_MANAGEMENT$OPEN_MICROAGENT_PULL_REQUESTS": {
+    "en": "Open MojoAgent Pull Requests"
+  },
+  "SETTINGS$SECURITY_ANALYZER_LLM_DEFAULT": {
+    "en": "LLM Analyzer (Default)"
+  },
+  "SETTINGS$SECURITY_ANALYZER_NONE": {
+    "en": "None (Ask for every command)"
+  },
+  "SETTINGS$SECURITY_ANALYZER_INVARIANT": {
+    "en": "Invariant Rule-based Analyzer"
+  },
+  "COMMON$HIGH_RISK": {
+    "en": "High Risk"
+  }
+}
