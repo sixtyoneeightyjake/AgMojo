@@ -8,8 +8,11 @@ services:
     container_name: openhands-app-${DATE:-}
     environment:
       - SANDBOX_RUNTIME_CONTAINER_IMAGE=ghcr.io/all-hands-ai/runtime:oh_v0.54.0_vq4hl0089c5gti17_gpa9v1n2cj3x0ufg
-      #- SANDBOX_USER_ID=${SANDBOX_USER_ID:-1234} # enable this only if you want a specific non-root sandbox user but you will have to manually adjust permissions of ~/.openhands for this user
+      - SANDBOX_USER_ID=${SANDBOX_USER_ID:-501} # Set to current user ID for proper workspace permissions
       - WORKSPACE_MOUNT_PATH=${WORKSPACE_BASE:-$PWD/workspace}
+      - NO_SETUP=false # Enable proper container setup
+      - INSTALL_THIRD_PARTY_RUNTIMES=false # Disable to avoid long startup delays during debugging
+    user: "0:0" # Run container as root as required by entrypoint.sh
     extra_hosts:
       - "host.docker.internal:host-gateway"
     volumes:
