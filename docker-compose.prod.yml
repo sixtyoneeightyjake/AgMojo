@@ -5,8 +5,8 @@ services:
       dockerfile: ./containers/app/Dockerfile
       args:
         # Vite build-time vars (replace with your domain + Supabase values)
-        VITE_BACKEND_BASE_URL: agentmojo.sixtyoneeighty.com
-        VITE_SUPABASE_URL: https://tynivuekarrrgcbdjaga.supabase.co
+        VITE_BACKEND_BASE_URL: ${DOMAIN:?set in environment}
+        VITE_SUPABASE_URL: ${VITE_SUPABASE_URL:?set in environment}
         VITE_SUPABASE_ANON_KEY: ${VITE_SUPABASE_ANON_KEY:?set in environment}
     image: openhands:prod
     container_name: openhands-app
@@ -16,9 +16,10 @@ services:
     restart: unless-stopped
     environment:
       # Use prebuilt runtime image to skip local runtime builds (faster + robust)
-      - SANDBOX_RUNTIME_CONTAINER_IMAGE=${SANDBOX_RUNTIME_CONTAINER_IMAGE:-docker.all-hands.dev/all-hands-ai/runtime:0.54-nikolaik}
+      - SANDBOX_RUNTIME_CONTAINER_IMAGE=${SANDBOX_RUNTIME_CONTAINER_IMAGE:-ghcr.io/all-hands-ai/runtime:oh_v0.54.0_vq4hl0089c5gti17_gpa9v1n2cj3x0ufg}
+
       # Public base URL (final public URL to render links)
-      - PUBLIC_BASE_URL=https://agentmojo.sixtyoneeighty.com
+      - PUBLIC_BASE_URL=https://${DOMAIN:?set in environment}
       # Supabase backend verification + per-user stores + auth
       - OPENHANDS_CONFIG_CLS=openhands.server.config.supabase_server_config.SupabaseServerConfig
       - OPENHANDS_CONVERSATION_VALIDATOR_CLS=openhands.storage.conversation.supabase_conversation_validator.SupabaseConversationValidator

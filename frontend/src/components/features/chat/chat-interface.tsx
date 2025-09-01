@@ -19,6 +19,7 @@ import { Messages } from "./messages";
 import { ChatSuggestions } from "./chat-suggestions";
 import { ActionSuggestions } from "./action-suggestions";
 import { ScrollProvider } from "#/context/scroll-context";
+import { ChatMessage } from "./chat-message";
 
 import { ScrollToBottomButton } from "#/components/shared/buttons/scroll-to-bottom-button";
 import { LoadingSpinner } from "#/components/shared/loading-spinner";
@@ -34,14 +35,7 @@ import { useConfig } from "#/hooks/query/use-config";
 import OpenHands from "#/api/open-hands";
 import { validateFiles } from "#/utils/file-validation";
 
-function getEntryPoint(
-  hasRepository: boolean | null,
-  hasReplayJson: boolean | null,
-): string {
-  if (hasRepository) return "github";
-  if (hasReplayJson) return "replay";
-  return "direct";
-}
+
 
 export function ChatInterface() {
   const { getErrorMessage } = useWSErrorMessage();
@@ -62,14 +56,20 @@ export function ChatInterface() {
 
   const { curAgentState } = useSelector((state: RootState) => state.agent);
 
+  // Mode toggle: 'agent' executes actions; 'brainstorm' is no-code ideation mode
+  const [chatMode, setChatMode] = React.useState<"agent" | "brainstorm">(
+    "agent",
+  );
+  const [brainstormMessages, setBrainstormMessages] = React.useState<
+    { role: "user" | "assistant"; content: string }[]
+  >([]);
+
   const [feedbackPolarity, setFeedbackPolarity] = React.useState<
     "positive" | "negative"
   >("positive");
   const [feedbackModalIsOpen, setFeedbackModalIsOpen] = React.useState(false);
   const [messageToSend, setMessageToSend] = React.useState<string | null>(null);
-  const { selectedRepository, replayJson } = useSelector(
-    (state: RootState) => state.initialQuery,
-  );
+
   const params = useParams();
   const { mutate: getTrajectory } = useGetTrajectory();
   const { mutateAsync: uploadFiles } = useUploadFiles();
@@ -110,7 +110,9 @@ export function ChatInterface() {
           { role: "assistant", content: reply },
         ]);
       } catch (e) {
-        displayErrorToast("Brainstorm request failed. Check your LLM settings.");
+        displayErrorToast(
+          "Brainstorm request failed. Check your LLM settings.",
+        );
       }
       setMessageToSend(null);
       return;
@@ -199,11 +201,15 @@ export function ChatInterface() {
     <ScrollProvider value={scrollProviderValue}>
       <div className="h-full flex flex-col justify-between">
         <div className="px-4 pt-2 flex items-center gap-2">
-          <span className="text-xs text-content-secondary">Mode:</span>
+          <span className="text-xs text-content-secondary">
+            Mode:
+          </span>
           <div className="inline-flex rounded-md border border-border-primary overflow-hidden">
             <button
               className={`px-3 py-1 text-xs ${
-                chatMode === "agent" ? "bg-primary text-white" : "bg-transparent"
+                chatMode === "agent"
+                  ? "bg-primary text-white"
+                  : "bg-transparent"
               }`}
               onClick={() => setChatMode("agent")}
               type="button"
@@ -260,15 +266,8 @@ export function ChatInterface() {
                   key={idx}
                   type={m.role === "user" ? "user" : "agent"}
                   message={m.content}
-                />)
-  // Mode toggle: 'agent' executes actions; 'brainstorm' is no-code ideation mode
-  const [chatMode, setChatMode] = React.useState<"agent" | "brainstorm">(
-    "agent",
-  );
-  const [brainstormMessages, setBrainstormMessages] = React.useState<
-    { role: "user" | "assistant"; content: string }[]
-  >([]);
-              )}
+                />
+              ))}
             </div>
           )}
 
