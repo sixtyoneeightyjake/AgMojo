@@ -201,6 +201,17 @@ export function ConversationSubscriptionsProvider({
       eventHandlersRef.current[conversationId] = handleOhEvent;
 
       try {
+        // Determine last received event id for this conversation to avoid duplicate replays
+        const lastEventId = (() => {
+          const existing = conversationSockets[conversationId]?.events;
+          if (!existing || existing.length === 0) return -1;
+          const last = existing[existing.length - 1] as unknown as {
+            id?: number | string;
+          };
+          const n = typeof last?.id === "string" ? parseInt(last.id, 10) : last?.id;
+          return Number.isFinite(n as number) ? (n as number) : -1;
+        })();
+
         // Create socket connection
         const socket = io(baseUrl, {
           transports: ["websocket"],
@@ -208,7 +219,9 @@ export function ConversationSubscriptionsProvider({
           query: {
             conversation_id: conversationId,
             session_api_key: sessionApiKey,
-            providers_set: providersSet,
+            // server accepts either array or comma-delimited, normalize to comma-delimited string
+            providers_set: providersSet.join(","),
+            latest_event_id: lastEventId,
           },
           reconnection: true,
           reconnectionAttempts: 5,

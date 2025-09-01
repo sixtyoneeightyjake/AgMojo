@@ -18,6 +18,11 @@ services:
       # Use prebuilt runtime image to skip local runtime builds (faster + robust)
       - SANDBOX_RUNTIME_CONTAINER_IMAGE=${SANDBOX_RUNTIME_CONTAINER_IMAGE:-ghcr.io/all-hands-ai/runtime:oh_v0.54.0_vq4hl0089c5gti17_gpa9v1n2cj3x0ufg}
 
+      # Select runtime: docker|remote|local|kubernetes|e2b (third_party)
+      - RUNTIME=${RUNTIME:-e2b}
+      # E2B runtime API key (required if RUNTIME=e2b)
+      - E2B_API_KEY=${E2B_API_KEY:-}
+
       # Public base URL (final public URL to render links)
       - PUBLIC_BASE_URL=https://${DOMAIN:?set in environment}
       # Supabase backend verification + per-user stores + auth
