@@ -34,7 +34,7 @@ RUN apt-get update -y \
     python3-dev pkg-config libopenblas-dev gfortran \
     && python3 -m pip install poetry --break-system-packages
 
-COPY pyproject.toml poetry.lock ./
+COPY pyproject.toml ./
 RUN touch README.md
 RUN export POETRY_CACHE_DIR && poetry install --no-root && rm -rf $POETRY_CACHE_DIR
 
@@ -86,7 +86,7 @@ COPY --chown=openhands:app --from=backend-builder ${VIRTUAL_ENV} ${VIRTUAL_ENV}
 COPY --chown=openhands:app ./microagents ./microagents
 COPY --chown=openhands:app ./openhands ./openhands
 COPY --chown=openhands:app ./openhands/runtime/plugins ./openhands/runtime/plugins
-COPY --chown=openhands:app pyproject.toml poetry.lock README.md MANIFEST.in LICENSE ./
+COPY --chown=openhands:app pyproject.toml README.md MANIFEST.in LICENSE ./
 
 RUN chmod -R 770 ${VIRTUAL_ENV} ./microagents ./openhands && \
     chmod -R 777 ./openhands/runtime/plugins
