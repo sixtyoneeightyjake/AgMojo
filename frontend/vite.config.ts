@@ -1,6 +1,8 @@
 /// <reference types="vitest" />
 /// <reference types="vite-plugin-svgr/client" />
 import { defineConfig, loadEnv } from "vite";
+import { fileURLToPath } from "url";
+import { dirname, resolve as resolvePath } from "path";
 import viteTsconfigPaths from "vite-tsconfig-paths";
 import svgr from "vite-plugin-svgr";
 import { reactRouter } from "@react-router/dev/vite";
@@ -8,6 +10,8 @@ import { configDefaults } from "vitest/config";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig(({ mode }) => {
+  const __filename = fileURLToPath(import.meta.url);
+  const __dirname = dirname(__filename);
   const {
     VITE_BACKEND_HOST = "127.0.0.1:3000",
     VITE_USE_TLS = "false",
@@ -31,6 +35,11 @@ export default defineConfig(({ mode }) => {
       svgr(),
       tailwindcss(),
     ],
+    resolve: {
+      alias: {
+        "#": resolvePath(__dirname, "src"),
+      },
+    },
     optimizeDeps: {
       include: [
         // Pre-bundle ALL dependencies to prevent runtime optimization and page reloads
