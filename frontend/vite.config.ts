@@ -37,7 +37,13 @@ export default defineConfig(({ mode }) => {
     ],
     resolve: {
       alias: {
+        // Path alias used throughout the app
         "#": resolvePath(__dirname, "src"),
+        // Ensure this file resolves correctly during build (some setups require explicit file mapping)
+        "#/i18n/declaration": resolvePath(
+          __dirname,
+          "src/i18n/declaration.ts"
+        ),
       },
     },
     optimizeDeps: {
