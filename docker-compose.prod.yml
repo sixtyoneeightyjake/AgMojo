@@ -8,6 +8,8 @@ services:
         VITE_BACKEND_BASE_URL: ${DOMAIN:?set in environment}
         VITE_SUPABASE_URL: ${VITE_SUPABASE_URL:?set in environment}
         VITE_SUPABASE_ANON_KEY: ${VITE_SUPABASE_ANON_KEY:?set in environment}
+        # Cache-bust arg for frontend builder layer
+        FRONTEND_REV: ${FRONTEND_REV:-dev}
     image: openhands:prod
     container_name: openhands-app
     # Bind to loopback only; Nginx will proxy from the public internet

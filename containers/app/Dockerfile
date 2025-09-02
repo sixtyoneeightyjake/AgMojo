@@ -1,5 +1,7 @@
 ARG OPENHANDS_BUILD_VERSION=dev
 FROM node:24.3.0-bookworm-slim AS frontend-builder
+ARG FRONTEND_REV=dev
+ENV FRONTEND_REV=${FRONTEND_REV}
 
 # Optional Vite build-time variables (inlined into the frontend build)
 ARG VITE_BACKEND_BASE_URL
@@ -16,6 +18,8 @@ COPY frontend/package.json frontend/package-lock.json ./
 RUN npm ci
 
 COPY frontend ./
+# Cache-bust hint: change FRONTEND_REV to force rebuild of this stage
+RUN echo "FRONTEND_REV=$FRONTEND_REV"
 RUN npm run build
 
 FROM python:3.12.10-slim AS base
