@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node scripts/make-i18n-translations.cjs",
     "build": "vite build",
     "preview": "vite preview --strictPort --port 4173",
     "lint": "eslint .",
