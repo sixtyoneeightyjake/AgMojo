@@ -15,6 +15,8 @@ Create or export the following server env vars:
 - OPENHANDS_CONVERSATION_VALIDATOR_CLS=openhands.storage.conversation.supabase_conversation_validator.SupabaseConversationValidator
 - SUPABASE_URL=https://YOUR-SUPABASE-PROJECT.supabase.co
 - (optional) SESSION_API_KEY=some-long-random-string
+- SANDBOX_USER_ID=$(id -u)   # matches the server user running docker compose
+- SANDBOX_VOLUMES=$PWD/workspace:/workspace:rw   # host workspace -> sandbox workspace
 
 Vite build-time env (frontend)
 Set these when building the image (Compose already wires args):
@@ -23,7 +25,7 @@ Set these when building the image (Compose already wires args):
 - VITE_SUPABASE_ANON_KEY=YOUR_ANON_KEY
 
 Build + run
-mkdir -p workspace
+mkdir -p workspace  # host path referenced by SANDBOX_VOLUMES
 docker compose -f docker-compose.yml -f docker-compose.prod.yml build
 docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 
@@ -54,11 +56,10 @@ Reload Nginx
 sudo nginx -t && sudo systemctl reload nginx
 
 Persistence
-- ~/.openhands is mounted to persist user data and conversation history
-- ./workspace is mounted for workspace files
+- ~/.openhands persists user data and conversation history (bind-mounted in Compose)
+- SANDBOX_VOLUMES mounts the host workspace into the sandbox runtime at /workspace
 
 Upgrade
 git pull
 docker compose -f docker-compose.yml -f docker-compose.prod.yml build --no-cache
 docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
-

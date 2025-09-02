@@ -78,7 +78,9 @@ RUN useradd -l -m -u $OPENHANDS_USER_ID --gid $OPENHANDS_USER_ID -s /bin/bash op
     usermod -aG sudo openhands && \
     echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 RUN chown -R openhands:app /app && chmod -R 770 /app
-RUN sudo chown -R openhands:app $WORKSPACE_BASE && sudo chmod -R 770 $WORKSPACE_BASE
+# Ensure mounted workspace and local file store are writable by app user
+RUN sudo chown -R openhands:app $WORKSPACE_BASE && sudo chmod -R 770 $WORKSPACE_BASE && \
+    sudo chown -R openhands:app $FILE_STORE_PATH && sudo chmod -R 770 $FILE_STORE_PATH
 USER openhands
 
 ENV VIRTUAL_ENV=/app/.venv \

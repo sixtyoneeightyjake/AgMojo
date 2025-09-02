@@ -24,6 +24,8 @@ services:
       - RUNTIME=${RUNTIME:-e2b}
       # E2B runtime API key (required if RUNTIME=e2b)
       - E2B_API_KEY=${E2B_API_KEY:-}
+      # Workspace mount to the sandbox runtime (replaces WORKSPACE_* envs)
+      - SANDBOX_VOLUMES=${SANDBOX_VOLUMES:-$PWD/workspace:/workspace:rw}
 
       # Public base URL (final public URL to render links)
       - PUBLIC_BASE_URL=https://${DOMAIN:?set in environment}
@@ -41,4 +43,3 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ~/.openhands:/.openhands
-      - ./workspace:/opt/workspace_base
