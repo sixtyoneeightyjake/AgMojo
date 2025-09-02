@@ -39,25 +39,39 @@ else
   echo "  sudo certbot --nginx -d $DOMAIN --redirect -m you@example.com --agree-tos"
 fi
 
-echo "[4/5] Basic Auth setup (enabled by default)..."
+echo "[4/5] Basic Auth (opt-in via ENABLE_BASIC_AUTH=true)..."
+if [ "${ENABLE_BASIC_AUTH:-false}" = "true" ]; then
+  echo "Enabling Basic Auth..."
+  BASIC_AUTH_USER=${BASIC_AUTH_USER:-admin}
+  BASIC_AUTH_PASSWORD=${BASIC_AUTH_PASSWORD:-$(tr -dc A-Za-z0-9 </dev/urandom | head -c 20)}
 
-# Ensure auth_basic lines are present (file ships with them enabled, this is just defensive)
-sudo sed -i 's/^\s*#\s*auth_basic /auth_basic /' /etc/nginx/sites-available/agentmojo.sixtyoneeighty.com || true
-sudo sed -i 's/^\s*#\s*auth_basic_user_file /auth_basic_user_file /' /etc/nginx/sites-available/agentmojo.sixtyoneeighty.com || true
+  # Insert auth directives into server block if not present
+  if ! grep -q "auth_basic" /etc/nginx/sites-available/agentmojo.sixtyoneeighty.com; then
+    sudo awk '
+      BEGIN {in_srv=0}
+      /server\s*\{/ {in_srv=1}
+      {print}
+      in_srv && /location\s*\/\s*\{/ && !done {
+        print "\n    # Basic Auth (added by setup script)";
+        print "    auth_basic \"Restricted\";";
+        print "    auth_basic_user_file /etc/nginx/.htpasswd;";
+        done=1
+      }
+      /\}/ && in_srv {in_srv=0}
+    ' /etc/nginx/sites-available/agentmojo.sixtyoneeighty.com | sudo tee /etc/nginx/sites-available/agentmojo.sixtyoneeighty.com >/dev/null
+  fi
 
-BASIC_AUTH_USER=${BASIC_AUTH_USER:-admin}
-# Default password per request; override by exporting BASIC_AUTH_PASSWORD
-# Note: for security, rotate this in production.
-BASIC_AUTH_PASSWORD=${BASIC_AUTH_PASSWORD:-'Eth@n0511!'}
+  if [ -f /etc/nginx/.htpasswd ]; then
+    sudo htpasswd -B -b /etc/nginx/.htpasswd "$BASIC_AUTH_USER" "$BASIC_AUTH_PASSWORD"
+  else
+    sudo htpasswd -B -b -c /etc/nginx/.htpasswd "$BASIC_AUTH_USER" "$BASIC_AUTH_PASSWORD"
+  fi
+  echo "Basic Auth enabled for user '$BASIC_AUTH_USER'"
 
-if [ -f /etc/nginx/.htpasswd ]; then
-  sudo htpasswd -B -b /etc/nginx/.htpasswd "$BASIC_AUTH_USER" "$BASIC_AUTH_PASSWORD"
+  sudo nginx -t
+  sudo systemctl reload nginx
 else
-  sudo htpasswd -B -b -c /etc/nginx/.htpasswd "$BASIC_AUTH_USER" "$BASIC_AUTH_PASSWORD"
+  echo "Skipping Basic Auth (ENABLE_BASIC_AUTH not set to true)."
 fi
-echo "Basic Auth credentials set for user '$BASIC_AUTH_USER'"
-
-sudo nginx -t
-sudo systemctl reload nginx
 
 echo "[5/5] Done. Verify HTTPS at: https://$DOMAIN"
