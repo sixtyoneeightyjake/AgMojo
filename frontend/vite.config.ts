@@ -36,15 +36,16 @@ export default defineConfig(({ mode }) => {
       tailwindcss(),
     ],
     resolve: {
-      alias: {
-        // Path alias used throughout the app
-        "#": resolvePath(__dirname, "src"),
-        // Ensure this file resolves correctly during build (some setups require explicit file mapping)
-        "#/i18n/declaration": resolvePath(
-          __dirname,
-          "src/i18n/declaration.ts"
-        ),
-      },
+      // Use array form to guarantee match order (specific first)
+      alias: [
+        {
+          find: "#/i18n/declaration",
+          replacement: resolvePath(__dirname, "src/i18n/declaration.ts"),
+        },
+        { find: "#", replacement: resolvePath(__dirname, "src") },
+      ],
+      // Be explicit about extensions (should include .ts by default, but safe to set)
+      extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json"],
     },
     optimizeDeps: {
       include: [
