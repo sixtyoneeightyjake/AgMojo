@@ -22,6 +22,8 @@ services:
 
       # Select runtime: docker|remote|local|kubernetes|e2b (third_party)
       - RUNTIME=${RUNTIME:-e2b}
+      # Ensure third-party runtime deps (e2b, etc.) are installed when using e.g. RUNTIME=e2b
+      - INSTALL_THIRD_PARTY_RUNTIMES=true
       # E2B runtime API key (required if RUNTIME=e2b)
       - E2B_API_KEY=${E2B_API_KEY:-}
       # Workspace mount to the sandbox runtime (replaces WORKSPACE_* envs)
