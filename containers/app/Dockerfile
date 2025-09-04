@@ -103,7 +103,7 @@ RUN python openhands/core/download.py # No-op to download assets
 # openhands:openhands -> openhands:app
 RUN find /app \! -group app -exec chgrp app {} +
 
-COPY --chown=openhands:app --from=frontend-builder /app/build ./frontend/build
+COPY --chown=openhands:app --from=frontend-builder /app/dist ./frontend/build
 # Bake a static index.html and flatten client assets if Remix build did not emit one (SPA fallback)
 USER root
 RUN set -eu \
