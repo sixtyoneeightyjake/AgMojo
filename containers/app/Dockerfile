@@ -104,6 +104,44 @@ RUN python openhands/core/download.py # No-op to download assets
 RUN find /app \! -group app -exec chgrp app {} +
 
 COPY --chown=openhands:app --from=frontend-builder /app/build ./frontend/build
+# Bake a static index.html and flatten client assets if Remix build did not emit one (SPA fallback)
+USER root
+RUN set -eu \
+  && FRONTEND_DIR="/app/frontend/build" \
+  && CLIENT_DIR="$FRONTEND_DIR/client" \
+  && if [ -d "$CLIENT_DIR" ]; then \
+       cp -an "$CLIENT_DIR"/* "$FRONTEND_DIR"/ 2>/dev/null || true; \
+     fi \
+  && if [ ! -f "$FRONTEND_DIR/index.html" ]; then \
+       ASSET_DIR="$FRONTEND_DIR/assets"; \
+       JS=$(ls -1 "$ASSET_DIR"/entry.client-*.js 2>/dev/null | head -n1 || true); \
+       if [ -z "$JS" ]; then \
+         JS=$(ls -1 "$ASSET_DIR"/root-*.js 2>/dev/null | head -n1 || true); \
+       fi; \
+       CSS=$(ls -1 "$ASSET_DIR"/root-*.css 2>/dev/null | head -n1 || true); \
+       if [ -n "$JS" ]; then \
+         JS_BN=$(basename "$JS"); \
+         CSS_TAG=""; \
+         if [ -n "$CSS" ]; then \
+           CSS_TAG="<link rel=\"stylesheet\" href=\"/assets/$(basename \"$CSS\")\">"; \
+         fi; \
+         printf %s\\n "<!doctype html>" \
+           "<html lang=\"en\">" \
+           "  <head>" \
+           "    <meta charset=\"utf-8\">" \
+           "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">" \
+           "    <title>Agent Mojo</title>" \
+           "$CSS_TAG" \
+           "  </head>" \
+           "  <body>" \
+           "    <div id=\"root\"></div>" \
+           "    <script type=\"module\" src=\"/assets/${JS_BN}\"></script>" \
+           "  </body>" \
+           "</html>" > "$FRONTEND_DIR/index.html"; \
+       fi; \
+     fi \
+  && chown -R openhands:app "$FRONTEND_DIR"
+USER openhands
 COPY --chown=openhands:app ./containers/app/entrypoint.sh /app/entrypoint.sh
 
 RUN chmod 770 ./frontend/build /app/entrypoint.sh

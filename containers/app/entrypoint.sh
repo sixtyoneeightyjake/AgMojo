@@ -1,9 +1,52 @@
 #!/bin/bash
 set -eo pipefail
 
+prepare_frontend() {
+  FRONTEND_DIR="/app/frontend/build"
+  CLIENT_DIR="$FRONTEND_DIR/client"
+  if [ -d "$CLIENT_DIR" ]; then
+    cp -an "$CLIENT_DIR"/* "$FRONTEND_DIR"/ 2>/dev/null || true
+  fi
+  if [ ! -f "$FRONTEND_DIR/index.html" ]; then
+    ASSET_DIR="$FRONTEND_DIR/assets"
+    JS="$(ls -1 "$ASSET_DIR"/entry.client-*.js 2>/dev/null | head -n1 || true)"
+    if [ -z "$JS" ]; then
+      JS="$(ls -1 "$ASSET_DIR"/root-*.js 2>/dev/null | head -n1 || true)"
+    fi
+    CSS="$(ls -1 "$ASSET_DIR"/root-*.css 2>/dev/null | head -n1 || true)"
+    if [ -n "$JS" ]; then
+      JS_BN="$(basename "$JS")"
+      CSS_TAG=""
+      if [ -n "$CSS" ]; then
+        CSS_TAG="<link rel=\"stylesheet\" href=\"/assets/$(basename \"$CSS\")\">"
+      fi
+      {
+        printf "%s\n" "<!doctype html>"
+        printf "%s\n" "<html lang=\"en\">"
+        printf "%s\n" "  <head>"
+        printf "%s\n" "    <meta charset=\"utf-8\">"
+        printf "%s\n" "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
+        printf "%s\n" "    <title>Agent Mojo</title>"
+        [ -n "$CSS_TAG" ] && printf "%s\n" "    $CSS_TAG"
+        printf "%s\n" "  </head>"
+        printf "%s\n" "  <body>"
+        printf "%s\n" "    <div id=\"root\"></div>"
+        printf "%s\n" "    <script type=\"module\" src=\"/assets/$JS_BN\"></script>"
+        printf "%s\n" "  </body>"
+        printf "%s\n" "</html>"
+      } > "$FRONTEND_DIR/index.html"
+      echo "Prepared SPA index.html -> $FRONTEND_DIR/index.html"
+    else
+      echo "Warning: no SPA JS entry found in $ASSET_DIR; skipping index.html generation"
+    fi
+  fi
+}
+
+
 echo "Starting OpenHands..."
 if [[ $NO_SETUP == "true" ]]; then
   echo "Skipping setup, running as $(whoami)"
+  prepare_frontend
   "$@"
   exit 0
 fi
@@ -38,6 +81,7 @@ fi
 if [[ "$SANDBOX_USER_ID" -eq 0 ]]; then
   echo "Running OpenHands as root"
   export RUN_AS_OPENHANDS=false
+  prepare_frontend
   "$@"
 else
   echo "Setting up enduser with id $SANDBOX_USER_ID"
@@ -69,5 +113,6 @@ else
 
   usermod -aG $DOCKER_SOCKET_GID enduser
   echo "Running as enduser"
+  prepare_frontend
   su enduser /bin/bash -c "${*@Q}" # This magically runs any arguments passed to the script as a command
 fi
