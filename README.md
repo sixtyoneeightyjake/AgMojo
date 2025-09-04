@@ -167,3 +167,12 @@ For a list of open source projects and licenses used in OpenHands, please see ou
   url={https://openreview.net/forum?id=OJd3ayDDoF}
 }
 ```
+
+## Release 2025-09-04
+
+- Frontend: client-only routes with lazy loading and error boundaries; conditional hydration using hydrateRoot when SSR context is present and createRoot otherwise.
+- Build: Vite reactRouter plugin enabled only in development to avoid SSR interference in production.
+- Container: generate a SPA index.html at build/runtime if not emitted by the build and flatten client assets for consistent serving.
+- Deployment: Rebuilt and redeployed the openhands service; verified public routes and deep links resolve with 200 OK.
+
+Commits: 182d43a, 3345b3a. Tag: v20250904-0714.
