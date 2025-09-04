@@ -1,6 +1,7 @@
 /// <reference types="vitest" />
 /// <reference types="vite-plugin-svgr/client" />
 import { defineConfig, loadEnv } from "vite";
+import react from "@vitejs/plugin-react";
 import { fileURLToPath } from "url";
 import { dirname, resolve as resolvePath } from "path";
 import viteTsconfigPaths from "vite-tsconfig-paths";
@@ -9,7 +10,7 @@ import { reactRouter } from "@react-router/dev/vite";
 import { configDefaults } from "vitest/config";
 import tailwindcss from "@tailwindcss/vite";
 
-export default defineConfig(({ mode }) => {
+export default defineConfig(({ command, mode }) => {
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = dirname(__filename);
   const {
@@ -28,9 +29,14 @@ export default defineConfig(({ mode }) => {
   const WS_URL = `${WS_PROTOCOL}://${VITE_BACKEND_HOST}/`;
   const FE_PORT = Number.parseInt(VITE_FRONTEND_PORT, 10);
 
+  const isDev = command === "serve" || mode === "development";
+
   return {
     plugins: [
-      !process.env.VITEST && reactRouter(),
+      // Ensure JSX transform and React fast-refresh in all modes
+      react(),
+      // Enable React Router Vite plugin only for local dev to avoid SSR injection in prod
+      ...(isDev ? [reactRouter()] : []),
       viteTsconfigPaths(),
       svgr(),
       tailwindcss(),
