@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { clsx } from "clsx";
 
@@ -66,7 +66,7 @@ export function PremiumInput({
   required = false,
   glass = false,
 }: PremiumInputProps) {
-  const [isFocused, setIsFocused] = React.useState(false);
+  const [isFocused, setIsFocused] = useState(false);
 
   const handleFocus = (e: React.FocusEvent<HTMLInputElement>) => {
     setIsFocused(true);
@@ -281,7 +281,7 @@ export function SearchInput(props: Omit<PremiumInputProps, "type" | "icon">) {
 export function PasswordInput(
   props: Omit<PremiumInputProps, "type" | "icon" | "iconPosition">,
 ) {
-  const [showPassword, setShowPassword] = React.useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   return (
     <PremiumInput

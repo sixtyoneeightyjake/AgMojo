@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useState } from "react";
 
 interface UseRateProps {
   threshold: number;
@@ -7,10 +7,10 @@ interface UseRateProps {
 const DEFAULT_CONFIG: UseRateProps = { threshold: 1000 };
 
 export const useRate = (config = DEFAULT_CONFIG) => {
-  const [items, setItems] = React.useState<number[]>([]);
-  const [rate, setRate] = React.useState<number | null>(null);
-  const [lastUpdated, setLastUpdated] = React.useState<number | null>(null);
-  const [isUnderThreshold, setIsUnderThreshold] = React.useState(true);
+  const [items, setItems] = useState<number[]>([]);
+  const [rate, setRate] = useState<number | null>(null);
+  const [lastUpdated, setLastUpdated] = useState<number | null>(null);
+  const [isUnderThreshold, setIsUnderThreshold] = useState(true);
 
   /**
    * Record an entry in order to calculate the rate
@@ -37,11 +37,11 @@ export const useRate = (config = DEFAULT_CONFIG) => {
     }
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     updateRate();
   }, [items]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     // Set up an interval to check if the time since the last update exceeds the threshold
     // If it does, set isUnderThreshold to false, otherwise set it to true
     // This ensures that the component can react to periods of inactivity

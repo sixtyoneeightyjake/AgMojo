@@ -1,12 +1,12 @@
 import { useQueries, useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import React from "react";
+import { useEffect, useState } from "react";
 import OpenHands from "#/api/open-hands";
 import { useConversationId } from "#/hooks/use-conversation-id";
 import { useRuntimeIsReady } from "#/hooks/use-runtime-is-ready";
 
 export const useActiveHost = () => {
-  const [activeHost, setActiveHost] = React.useState<string | null>(null);
+  const [activeHost, setActiveHost] = useState<string | null>(null);
   const { conversationId } = useConversationId();
   const runtimeIsReady = useRuntimeIsReady();
 
@@ -43,7 +43,7 @@ export const useActiveHost = () => {
 
   const appsData = apps.map((app) => app.data);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const successfulApp = appsData.find((app) => app);
     setActiveHost(successfulApp || "");
   }, [appsData]);

@@ -1,4 +1,10 @@
-import React from "react";
+import React, {
+  useContext,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { io, Socket } from "socket.io-client";
 import { useQueryClient } from "@tanstack/react-query";
 import EventLogger from "#/utils/event-logger";
@@ -134,14 +140,14 @@ export function WsClientProvider({
   const { removeOptimisticUserMessage } = useOptimisticUserMessage();
   const { setErrorMessage, removeErrorMessage } = useWSErrorMessage();
   const queryClient = useQueryClient();
-  const sioRef = React.useRef<Socket | null>(null);
+  const sioRef = useRef<Socket | null>(null);
   const [webSocketStatus, setWebSocketStatus] =
-    React.useState<WebSocketStatus>("DISCONNECTED");
-  const [events, setEvents] = React.useState<Record<string, unknown>[]>([]);
-  const [parsedEvents, setParsedEvents] = React.useState<
+    useState<WebSocketStatus>("DISCONNECTED");
+  const [events, setEvents] = useState<Record<string, unknown>[]>([]);
+  const [parsedEvents, setParsedEvents] = useState<
     (OpenHandsAction | OpenHandsObservation)[]
   >([]);
-  const lastEventRef = React.useRef<Record<string, unknown> | null>(null);
+  const lastEventRef = useRef<Record<string, unknown> | null>(null);
   const { providers } = useUserProviders();
 
   const messageRateHandler = useRate({ threshold: 250 });
@@ -283,7 +289,7 @@ export function WsClientProvider({
     refetchConversation();
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     lastEventRef.current = null;
 
     // reset events when conversationId changes
@@ -292,7 +298,7 @@ export function WsClientProvider({
     setWebSocketStatus("CONNECTING");
   }, [conversationId]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (!conversationId) {
       throw new Error("No conversation ID provided");
     }
@@ -361,7 +367,7 @@ export function WsClientProvider({
     providers,
   ]);
 
-  React.useEffect(
+  useEffect(
     () => () => {
       const sio = sioRef.current;
       if (sio) {
@@ -372,7 +378,7 @@ export function WsClientProvider({
     [],
   );
 
-  const value = React.useMemo<UseWsClient>(
+  const value = useMemo<UseWsClient>(
     () => ({
       webSocketStatus,
       isLoadingMessages: messageRateHandler.isUnderThreshold,
@@ -392,6 +398,6 @@ export function WsClientProvider({
 }
 
 export function useWsClient() {
-  const context = React.useContext(WsClientContext);
+  const context = useContext(WsClientContext);
   return context;
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
 
@@ -45,9 +45,9 @@ function AppContent() {
   // Set the document title to the conversation title when available
   useDocumentTitleFromState();
 
-  const [width, setWidth] = React.useState(window.innerWidth);
+  const [width, setWidth] = useState(window.innerWidth);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (isFetched && !conversation && isAuthed) {
       displayErrorToast(
         "This conversation does not exist, or you do not have permission to access it.",
@@ -61,7 +61,7 @@ function AppContent() {
     }
   }, [conversation?.conversation_id, isFetched, isAuthed, providers]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     dispatch(clearTerminal());
     dispatch(clearJupyter());
   }, [conversationId]);
@@ -75,7 +75,7 @@ function AppContent() {
     setWidth(window.innerWidth);
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);

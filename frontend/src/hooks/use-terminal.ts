@@ -1,6 +1,6 @@
 import { FitAddon } from "@xterm/addon-fit";
 import { Terminal } from "@xterm/xterm";
-import React from "react";
+import { useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 import { Command } from "#/state/command-slice";
 import { RootState } from "#/store";
@@ -49,11 +49,11 @@ export const useTerminal = ({
 }: UseTerminalConfig = DEFAULT_TERMINAL_CONFIG) => {
   const { send } = useWsClient();
   const { curAgentState } = useSelector((state: RootState) => state.agent);
-  const terminal = React.useRef<Terminal | null>(null);
-  const fitAddon = React.useRef<FitAddon | null>(null);
-  const ref = React.useRef<HTMLDivElement>(null);
+  const terminal = useRef<Terminal | null>(null);
+  const fitAddon = useRef<FitAddon | null>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const lastCommandIndex = persistentLastCommandIndex; // Use the persistent reference
-  const keyEventDisposable = React.useRef<{ dispose: () => void } | null>(null);
+  const keyEventDisposable = useRef<{ dispose: () => void } | null>(null);
   const disabled = RUNTIME_INACTIVE_STATES.includes(curAgentState);
 
   const createTerminal = () =>
@@ -120,7 +120,7 @@ export const useTerminal = ({
   };
 
   // Initialize terminal and handle cleanup
-  React.useEffect(() => {
+  useEffect(() => {
     terminal.current = createTerminal();
     fitAddon.current = new FitAddon();
 
@@ -147,7 +147,7 @@ export const useTerminal = ({
     };
   }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (
       terminal.current &&
       commands.length > 0 &&
@@ -167,7 +167,7 @@ export const useTerminal = ({
     }
   }, [commands, disabled]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     let resizeObserver: ResizeObserver | null = null;
 
     resizeObserver = new ResizeObserver(() => {
@@ -183,7 +183,7 @@ export const useTerminal = ({
     };
   }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (terminal.current) {
       // Dispose of existing listeners if they exist
       if (keyEventDisposable.current) {

@@ -1,5 +1,4 @@
-import React from "react";
-import { PrefetchPageLinks } from "react-router";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { HomeHeader } from "#/components/features/home/home-header";
 import { RepoConnector } from "#/components/features/home/repo-connector";
@@ -8,16 +7,12 @@ import { useUserProviders } from "#/hooks/use-user-providers";
 import { GitRepository } from "#/types/git";
 import OpenHands from "#/api/open-hands";
 
-<PrefetchPageLinks page="/conversations/:conversationId" />;
-
 function HomeScreen() {
   const { providers } = useUserProviders();
-  const [selectedRepo, setSelectedRepo] = React.useState<GitRepository | null>(
-    null,
-  );
+  const [selectedRepo, setSelectedRepo] = useState<GitRepository | null>(null);
 
   // Kick off runtime prewarm in the background on first load
-  React.useEffect(() => {
+  useEffect(() => {
     OpenHands.prewarmRuntime();
   }, []);
 

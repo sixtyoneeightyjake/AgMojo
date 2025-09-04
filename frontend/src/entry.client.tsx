@@ -15,6 +15,13 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import store from "./store";
 import { queryClient } from "./query-client-config";
 
+// Expose React globally to satisfy any classic-runtime chunks
+// that may reference `React` at runtime in production builds.
+if (typeof window !== "undefined") {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (window as any).React = React;
+}
+
 async function prepareApp() {
   if (
     process.env.NODE_ENV === "development" &&

@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FileDiffViewer } from "#/components/features/diff-viewer/file-diff-viewer";
 import { retrieveAxiosErrorMessage } from "#/utils/retrieve-axios-error-message";
 import { useGetGitChanges } from "#/hooks/query/use-get-git-changes";
@@ -30,7 +30,7 @@ function GitChanges() {
     isLoading: loadingGitChanges,
   } = useGetGitChanges();
 
-  const [statusMessage, setStatusMessage] = React.useState<string[] | null>(
+  const [statusMessage, setStatusMessage] = useState<string[] | null>(
     null,
   );
 
@@ -40,7 +40,7 @@ function GitChanges() {
   const isNotGitRepoError =
     error && GIT_REPO_ERROR_PATTERN.test(retrieveAxiosErrorMessage(error));
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (!runtimeIsActive) {
       setStatusMessage([I18nKey.DIFF_VIEWER$WAITING_FOR_RUNTIME]);
     } else if (error) {

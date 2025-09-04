@@ -5,6 +5,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  PrefetchPageLinks,
 } from "react-router";
 import "./tailwind.css";
 import "./index.css";
@@ -19,6 +20,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
+        {/* Prefetch heavy route ahead of time for faster navigation */}
+        <PrefetchPageLinks page="/conversations/:conversationId" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -69,4 +72,12 @@ export const meta: MetaFunction = () => [
 
 export default function App() {
   return <Outlet />;
+}
+
+// Rendered by React Router during initial hydration for SSR streams.
+// Avoids console errors when SSR context is present but no fallback is provided.
+export function HydrateFallback() {
+  return (
+    <div style={{ padding: 16, color: "#fff" }}>Loading…</div>
+  );
 }

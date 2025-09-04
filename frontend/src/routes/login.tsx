@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router";
 import { supabase } from "#/lib/supabase";
 import { PrimaryButton } from "#/components/common/premium-button";
@@ -7,7 +7,7 @@ import { FaGithub } from "react-icons/fa6";
 export default function LoginPage() {
   const navigate = useNavigate();
 
-  React.useEffect(() => {
+  useEffect(() => {
     // If Supabase not configured, skip login
     if (!supabase) {
       navigate("/");

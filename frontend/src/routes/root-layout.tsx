@@ -1,4 +1,9 @@
-import React from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 import {
   useRouteError,
   isRouteErrorResponse,
@@ -95,7 +100,7 @@ export default function MainApp() {
   // Handle authentication callback and set login method after successful authentication
   useAuthCallback();
 
-  React.useEffect(() => {
+  useEffect(() => {
     // Don't change language when on TOS page
     if (!isOnTosPage && settings?.LANGUAGE) {
       i18n.changeLanguage(settings.LANGUAGE);
@@ -104,7 +109,7 @@ export default function MainApp() {
 
   // analytics consent removed
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (settings?.IS_NEW_USER && config.data?.APP_MODE === "saas") {
       displaySuccessToast(
         t("BILLING$YOURE_IN", { defaultValue: "You're in!" }),
@@ -112,7 +117,7 @@ export default function MainApp() {
     }
   }, [settings?.IS_NEW_USER, config.data?.APP_MODE]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     // Don't do any redirects when on TOS page
     // Don't allow users to use the app if it 402s
     if (!isOnTosPage && error?.status === 402 && pathname !== "/") {
@@ -121,7 +126,7 @@ export default function MainApp() {
   }, [error?.status, pathname, isOnTosPage]);
 
   // Function to check if login method exists in local storage
-  const checkLoginMethodExists = React.useCallback(() => {
+  const checkLoginMethodExists = useCallback(() => {
     // Only check localStorage if we're in a browser environment
     if (typeof window !== "undefined" && window.localStorage) {
       return localStorage.getItem(LOCAL_STORAGE_KEYS.LOGIN_METHOD) !== null;
@@ -130,12 +135,12 @@ export default function MainApp() {
   }, []);
 
   // State to track if login method exists
-  const [loginMethodExists, setLoginMethodExists] = React.useState(
+  const [loginMethodExists, setLoginMethodExists] = useState(
     checkLoginMethodExists(),
   );
 
   // Listen for storage events to update loginMethodExists when logout happens
-  React.useEffect(() => {
+  useEffect(() => {
     const handleStorageChange = (event: StorageEvent) => {
       if (event.key === LOCAL_STORAGE_KEYS.LOGIN_METHOD) {
         setLoginMethodExists(checkLoginMethodExists());
@@ -157,7 +162,7 @@ export default function MainApp() {
   }, [checkLoginMethodExists]);
 
   // Check login method status when auth status changes
-  React.useEffect(() => {
+  useEffect(() => {
     // When auth status changes (especially on logout), recheck login method
     setLoginMethodExists(checkLoginMethodExists());
   }, [isAuthed, checkLoginMethodExists]);
@@ -182,7 +187,7 @@ export default function MainApp() {
   const { loading: supaLoading, hasSession } = useSupabaseSession();
   useSyncGitHubToken();
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (!supabase) return; // No gating if supabase not configured
     const onLoginRoute = pathname === "/login";
     if (!supaLoading && !hasSession && !onLoginRoute) {

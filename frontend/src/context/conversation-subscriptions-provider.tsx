@@ -5,6 +5,7 @@ import React, {
   useCallback,
   useEffect,
   useRef,
+  useMemo,
 } from "react";
 import { io, Socket } from "socket.io-client";
 import { OpenHandsParsedEvent } from "#/types/core";
@@ -307,7 +308,7 @@ export function ConversationSubscriptionsProvider({
     [conversationSockets],
   );
 
-  const value = React.useMemo(
+  const value = useMemo(
     () => ({
       activeConversationIds,
       subscribeToConversation,

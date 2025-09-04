@@ -1,11 +1,11 @@
-import * as React from "react";
+import { useEffect, useState } from "react";
 import { supabase } from "#/lib/supabase";
 
 export function useSupabaseSession() {
-  const [loading, setLoading] = React.useState<boolean>(true);
-  const [hasSession, setHasSession] = React.useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [hasSession, setHasSession] = useState<boolean>(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     let isMounted = true;
     if (!supabase) {
       setHasSession(true); // If not configured, don't gate the app
@@ -31,4 +31,3 @@ export function useSupabaseSession() {
 
   return { loading, hasSession } as const;
 }
-

@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect } from "react";
 import { useWsClient } from "#/context/ws-client-provider";
 import { generateAgentStateChangeEvent } from "#/services/agent-state-service";
 import { AgentState } from "#/types/agent-state";
@@ -15,7 +15,7 @@ const isServerError = (data: object): data is ServerError => "error" in data;
 export const useHandleWSEvents = () => {
   const { events, send } = useWsClient();
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (!events.length) {
       return;
     }

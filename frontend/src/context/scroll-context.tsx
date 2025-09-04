@@ -1,4 +1,4 @@
-import React, { createContext, useContext, ReactNode, RefObject } from "react";
+import React, { createContext, useContext, ReactNode, RefObject, useRef } from "react";
 import { useScrollToBottom } from "#/hooks/use-scroll-to-bottom";
 
 interface ScrollContextType {
@@ -21,7 +21,7 @@ interface ScrollProviderProps {
 }
 
 export function ScrollProvider({ children, value }: ScrollProviderProps) {
-  const scrollHook = useScrollToBottom(React.useRef<HTMLDivElement>(null));
+  const scrollHook = useScrollToBottom(useRef<HTMLDivElement>(null));
 
   // Use provided value or default to the hook
   const contextValue = value || scrollHook;

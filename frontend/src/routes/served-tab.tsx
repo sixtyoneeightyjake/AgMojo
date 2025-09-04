@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaArrowRotateRight } from "react-icons/fa6";
 import { FaExternalLinkAlt, FaHome } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
@@ -9,13 +9,13 @@ import { I18nKey } from "#/i18n/declaration";
 function ServedApp() {
   const { t } = useTranslation();
   const { activeHost } = useActiveHost();
-  const [refreshKey, setRefreshKey] = React.useState(0);
-  const [currentActiveHost, setCurrentActiveHost] = React.useState<
+  const [refreshKey, setRefreshKey] = useState(0);
+  const [currentActiveHost, setCurrentActiveHost] = useState<
     string | null
   >(null);
-  const [path, setPath] = React.useState<string>("hello");
+  const [path, setPath] = useState<string>("hello");
 
-  const formRef = React.useRef<HTMLFormElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleOnBlur = () => {
     if (formRef.current) {
@@ -40,7 +40,7 @@ function ServedApp() {
     }
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     resetUrl();
   }, [activeHost]);
 

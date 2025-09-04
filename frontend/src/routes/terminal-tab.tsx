@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Suspense, lazy, useMemo } from "react";
 
 function TerminalTab() {
-  const Terminal = React.useMemo(
-    () => React.lazy(() => import("#/components/features/terminal/terminal")),
+  const Terminal = useMemo(
+    () => lazy(() => import("#/components/features/terminal/terminal")),
     [],
   );
 
@@ -11,9 +11,9 @@ function TerminalTab() {
       <div className="flex-grow overflow-auto">
         {/* Terminal uses some API that is not compatible in a server-environment. For this reason, we lazy load it to ensure
          * that it loads only in the client-side. */}
-        <React.Suspense fallback={<div className="h-full" />}>
+        <Suspense fallback={<div className="h-full" />}>
           <Terminal />
-        </React.Suspense>
+        </Suspense>
       </div>
     </div>
   );
